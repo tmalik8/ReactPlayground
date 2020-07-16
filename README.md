@@ -49,7 +49,7 @@ If you have an idea of something you’d like to implement on the website, creat
 The assignment for everyone is as follows:
 
 Part 1 - Create React Component
-We’re going to practice creating react components using the react-bootstrap library. The components you create will make use of “props” and “state”. 
+We’re going to practice creating react components using the react-bootstrap library. The components you create must make use of “props”.
 
 Part 2 - Create a unit test for your component. Note, there is a test that runs that checks that everything in the App.js component can render. But we want to test the specifics of your component.
 

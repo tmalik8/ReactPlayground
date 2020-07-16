@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "react-scripts test a --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -32,5 +32,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "source-map-loader": "^1.0.1",
+    "ts-jest": "^26.1.2",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.6"
   }
 }
