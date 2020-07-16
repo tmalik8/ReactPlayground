@@ -18,22 +18,27 @@ import ToastWrapper from './components/ToastWrapper'
 import InternInfoDisplay from './components/InternInfoDisplay'
 /* Models/Services */
 
-import InternViewModel from './model/InternViewModel'
+import {Intern} from './model/Intern'
 
-let amonte = new InternViewModel("Amonte", "Just a regular Joe named Amonte.", "Intern Lead", "https://media-exp1.licdn.com/dms/image/C5603AQEb3xbVkqos3A/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CsfxpsRe0NU7Rj2HybugKe0LS90IHLNtC3ES82mfmLA")
+let amonte = new Intern("Amonte", "Just a regular Joe named Amonte.", "Intern Lead"
+, "https://media-exp1.licdn.com/dms/image/C5603AQEb3xbVkqos3A/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CsfxpsRe0NU7Rj2HybugKe0LS90IHLNtC3ES82mfmLA"
+, new Date("1/1/21")
+);
 const App = () => (
   <Container className="p-12">
     <Jumbotron>
       <h1 className="header">TurnUp React Playground</h1>
       <Container fluid className="p-6">
           <Row>
-            <Col><InternInfoDisplay internViewModel={amonte} onClickOverload={()=> { let content = "This was also logged to the console"; 
+            <Col><InternInfoDisplay intern={amonte} onClick={()=> { let content = "This was also logged to the console"; 
             console.log(content); alert(content);}}>
               <div>
                 Hi, welcome. 
               </div>
               </InternInfoDisplay></Col>
-           
+           <Col>
+           <InternInfoDisplay></InternInfoDisplay>
+           </Col>
           </Row>
         </Container>
       
