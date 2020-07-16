@@ -37,9 +37,11 @@ Note: Any changes you make to the code while this action is running will cause t
 
 #### Task 1
 
-- This takes place on a new repository that is not open to commits from the public. So you’ll have to fork it.
-- The “head” branch will be development. This means you always want to fetch changes from development before beginning work.
-- Once you’ve fetched and merged into your development branch, start a new branch that is appropriately named to describe what changes you’re making.
+This takes place on a new repository that is not open to commits from the public. So you’ll have to fork it.
+
+The “head” branch will be development. This means you always want to fetch changes from development before beginning work.
+
+Once you’ve fetched and merged into your development branch, start a new branch that is appropriately named to describe what changes you’re making.
 
 
 If you have an idea of something you’d like to implement on the website, create an issue on the repo describing what you’d like to do. For example, we could use a navigation menu. Anyone who considers themselves proficient in react, I encourage to suggest new features for the website in this manner.
