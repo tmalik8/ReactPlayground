@@ -1,7 +1,7 @@
 import {IIntern} from '../model/Intern';
  
 type InternViewModel = {
-    intern:IIntern,
+    intern?:IIntern,
     onClick?:Function,
     children?:any
 }

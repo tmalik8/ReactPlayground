@@ -15,13 +15,13 @@ describe("Intern ViewModel tests", () => {
         });
         it("should handle missing intern argument", () => {
             const div = document.createElement('div');
-            ReactDOM.render(<InternInfoDisplay intern={null} />, div);
+            ReactDOM.render(<InternInfoDisplay  />, div);
 
         });
 
         it("Should give proper message when no intern is passed", () =>{
             
-            const { getByText } = render(<InternInfoDisplay intern={null}/>);
+            const { getByText } = render(<InternInfoDisplay />);
             expect(getByText('No intern data was passed in.')).toBeInTheDocument();
 
         });
