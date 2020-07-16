@@ -48,13 +48,20 @@ If you have an idea of something you’d like to implement on the website, creat
 
 The assignment for everyone is as follows:
 
-Part 1 - Create React Component
+Part 0 - Familiarize yourself with the application structure. I haven't a great resource for this yet but here are some options:
+
+https://www.pluralsight.com/guides/file-structure-react-applications-created-create-react-app
+https://dev.to/amirmoh10/understanding-the-react-build-workflow-and-the-folder-structure-3hlc
+
+
+Part 1 - Create React Bootstrap Component (https://react-bootstrap.github.io/)
+
 We’re going to practice creating react components using the react-bootstrap library. The components you create must make use of “props”.
 
-Part 2 - Create a unit test for your component. Note, there is a test that runs that checks that everything in the App.js component can render. But we want to test the specifics of your component.
+Part 2 - Create a unit test for your component (https://testing-library.com/docs/react-testing-library/intro / https://testing-library.com/docs/react-testing-library/cheatsheet)
 
-Part 3 - Place your component somewhere within the application. 
+Note, there is a test that runs that checks that everything in the App.js component can render. But we want to test the specifics of your component. 
 
-Part 4 - Make use of the InternInfoDisplay component to display information about yourself.
+Part 3 - Make use of the InternInfoDisplay component to display information about yourself on the site.
 
 These should all be nested under a branch. You can name it *yourname*-react-task1.
