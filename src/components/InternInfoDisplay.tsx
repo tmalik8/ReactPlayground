@@ -1,12 +1,8 @@
 import React from 'react';
 import { Card, Button, Badge} from 'react-bootstrap';
-import {IIntern} from '../model/Intern'
+import {InternViewModel} from '../ViewModel/InternViewModels'
 
-type InternViewModel = {
-    intern:IIntern,
-    onClick:Function,
-    children:any
-}
+
 
 const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
     if(!intern){
@@ -19,10 +15,11 @@ const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
         )
     }
 
+    let _onClick = () => {alert("No overload was passed in. So here we are.")}; 
     //handle the condition where no onclick was passed in
-    if (!onClick)
+    if (onClick !== undefined)
     {
-        onClick = () => {alert("No overload was passed in. So here we are.")};
+        _onClick = () => onClick();
     }
 
     return (
@@ -33,7 +30,7 @@ const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
                 <Card.Text>
                     {intern.Description}
                 </Card.Text>
-                <Button variant="primary" onClick={() => onClick()}>Click me</Button>
+                <Button variant="primary" onClick={() => _onClick()}>Click me</Button>
                 {children}
             </Card.Body>
         </Card>)
