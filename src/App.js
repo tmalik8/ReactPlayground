@@ -1,65 +1,55 @@
 import React, { useState } from 'react';
 import './App.css';
 
+/**React Components */
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* import your component here */
+/* Custom Components*/
 
 import IncrementButton from './components/IncrementButton';
 import InputField from './components/InputField';
+import ToastWrapper from './components/ToastWrapper'
+import InternInfoDisplay from './components/InternInfoDisplay'
+/* Models/Services */
 
+import InternViewModel from './model/InternViewModel'
 
-const ExampleToast = ({ children }) => {
-  const [show, toggleShow] = useState(true);
-
-  return (
-    <Toast show={show} onClose={() => toggleShow(!show)}>
-      <Toast.Header>
-        <strong className="mr-auto">React-Bootstrap</strong>
-      </Toast.Header>
-      <Toast.Body>{children}</Toast.Body>
-    </Toast>
-  );
-};
-
+let amonte = new InternViewModel("Amonte", "Just a regular Joe named Amonte.", "Intern Lead", "https://media-exp1.licdn.com/dms/image/C5603AQEb3xbVkqos3A/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CsfxpsRe0NU7Rj2HybugKe0LS90IHLNtC3ES82mfmLA")
 const App = () => (
-  <Container className="p-3">
+  <Container className="p-12">
     <Jumbotron>
-      <h1 className="header">Welcome To React-Bootstrap</h1>
-      <ExampleToast>
-        We now have Toasts
+      <h1 className="header">TurnUp React Playground</h1>
+      <Container fluid className="p-6">
+          <Row>
+            <Col><InternInfoDisplay internViewModel={amonte} onClickOverload={()=> { let content = "This was also logged to the console"; 
+            console.log(content); alert(content);}}>
+              <div>
+                Hi, welcome. 
+              </div>
+              </InternInfoDisplay></Col>
+           
+          </Row>
+        </Container>
+      
+      <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
-          🎉
+          🎉 🎉 🎉 🎉
         </span>
-      </ExampleToast>
-      <ExampleToast>
-        More Toasts
-        <span role="img" aria-label="tada">
-          🎉
-        </span>
-      </ExampleToast>
-      <ExampleToast>
-        More Toasts
-        <span role="img" aria-label="tada">
-          🎉
-        </span>
-      </ExampleToast>
-      <ExampleToast>
-        More Toasts
-        <span role="img" aria-label="tada">
-          🎉
-        </span>
-      </ExampleToast>
+      </ToastWrapper>
+      
     </Jumbotron>
 
-    <Jumbotron>
+    <Jumbotron hidden>
       <IncrementButton />
     </Jumbotron>
 
-    <Jumbotron>
+    <Jumbotron hidden>
       <InputField />
     </Jumbotron>
 

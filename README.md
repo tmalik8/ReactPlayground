@@ -9,5 +9,25 @@ In this project, take the time to look through the React-Bootstrap library's Com
 
 https://react-bootstrap.github.io/components/
 
-To start, run 'npm start' in your preferred terminal
 
+
+### Running Tests
+
+```console
+npm test 
+```
+
+This will run any tests in the __tests__ folder, as long as they end in test.js or .js. Place your test files here. 
+
+Note: the tests run on Jest (not Mocha). 
+
+Once you've run this command, you'll have to kill the process with ctrl + C. 
+
+Otherwise, it will keep running and any changes you make a file will cause the tests to re-run.
+
+
+### Running the App
+
+To start, run 'npm start' in your preferred terminal.
+
+Note: Any changes you make to the code while this action is running will cause the app to rebuild. This allows for modifying the code and being able to immediately see the changes in the browser. To kill this process, hit ctrl + C in the terminal.
