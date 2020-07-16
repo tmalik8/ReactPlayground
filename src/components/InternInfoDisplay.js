@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Button, Badge} from 'react-bootstrap';
-import InternViewModel from '../model/InternViewModel'
+
 
 const InternInfoDisplay = ({internViewModel, onClickOverload, children}) => {
     const viewModel = internViewModel;
