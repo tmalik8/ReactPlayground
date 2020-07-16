@@ -35,7 +35,8 @@ Note: Any changes you make to the code while this action is running will cause t
 
 ### Assignments
 
-#### Task 1
+#### React Focus
+##### Task 1
 
 This takes place on a new repository that is not open to commits from the public. So you’ll have to fork it.
 
