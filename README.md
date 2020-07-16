@@ -45,8 +45,6 @@ The “head” branch will be development. This means you always want to fetch c
 Once you’ve fetched and merged into your development branch, start a new branch that is appropriately named to describe what changes you’re making.
 
 
-If you have an idea of something you’d like to implement on the website, create an issue on the repo describing what you’d like to do. For example, we could use a navigation menu. Anyone who considers themselves proficient in react, I encourage to suggest new features for the website in this manner.
-
 The assignment for everyone is as follows:
 
 Part 0 - Familiarize yourself with the application structure. I haven't a great resource for this yet but here are some options:
