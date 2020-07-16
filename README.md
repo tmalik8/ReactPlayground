@@ -54,6 +54,8 @@ Part 0 - Familiarize yourself with the application structure. I haven't a great 
 https://www.pluralsight.com/guides/file-structure-react-applications-created-create-react-app
 https://dev.to/amirmoh10/understanding-the-react-build-workflow-and-the-folder-structure-3hlc
 
+Make sure you can run the app and the tests.
+
 
 Part 1 - Create React Bootstrap Component (https://react-bootstrap.github.io/)
 
