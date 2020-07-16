@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { render } from '@testing-library/react';
 import { Intern } from '../../model/Intern'
 import InternInfoDisplay from '../../components/InternInfoDisplay'
-
+import '@testing-library/jest-dom/extend-expect'; //this helps with intellisense, but is already imported at a higher level
 
 describe("Intern ViewModel tests", () => {
     describe("Component", () => {
@@ -15,7 +15,14 @@ describe("Intern ViewModel tests", () => {
         });
         it("should handle missing intern argument", () => {
             const div = document.createElement('div');
-            ReactDOM.render(<InternInfoDisplay  />, div);
+            ReactDOM.render(<InternInfoDisplay intern={null} />, div);
+
+        });
+
+        it("Should give proper message when no intern is passed", () =>{
+            
+            const { getByText } = render(<InternInfoDisplay intern={null}/>);
+            expect(getByText('No intern data was passed in.')).toBeInTheDocument();
 
         });
     });
