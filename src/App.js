@@ -14,8 +14,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import IncrementButton from './components/IncrementButton';
 import InputField from './components/InputField';
-import ToastWrapper from './components/ToastWrapper'
-import InternInfoDisplay from './components/InternInfoDisplay'
+import ToastWrapper from './components/ToastWrapper';
+import InternInfoDisplay from './components/InternInfoDisplay';
+import LanguageList from './components/LanguageList';
 /* Models/Services */
 
 import {Intern} from './model/Intern'
@@ -24,6 +25,7 @@ let amonte = new Intern("Amonte", "Just a regular Joe named Amonte.", "Intern Le
 , "https://media-exp1.licdn.com/dms/image/C5603AQEb3xbVkqos3A/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CsfxpsRe0NU7Rj2HybugKe0LS90IHLNtC3ES82mfmLA"
 , new Date("1/1/21")
 );
+
 const App = () => (
   <Container className="p-12">
     <Jumbotron>
@@ -48,6 +50,10 @@ const App = () => (
         </span>
       </ToastWrapper>
       
+    </Jumbotron>
+
+    <Jumbotron>
+      <LanguageList />
     </Jumbotron>
 
     <Jumbotron hidden>
