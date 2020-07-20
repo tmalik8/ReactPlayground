@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
 /**React Components */
@@ -15,9 +15,11 @@ import IncrementButton from "./components/IncrementButton";
 import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
+import LightModal from "./components/lightModal";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
+
 
 let amonte = new Intern(
   "Amonte",
@@ -33,54 +35,83 @@ let sanjana = new Intern(
   "https://picjumbo.com/wp-content/uploads/free-stock-photos-san-francisco-1080x720.jpg",
   new Date("8/21/20")
 );
-const App = () => (
-  <Container className="p-12">
-    <Jumbotron>
-      <h1 className="header">TurnUp React Playground</h1>
-      <Container fluid className="p-6">
-        <Row>
-          <Col>
-            <InternInfoDisplay
-              intern={amonte}
-              onClick={() => {
-                let content = "This was also logged to the console";
-                console.log(content);
-                alert(content);
-              }}
-            >
-              <div>Hi, welcome.</div>
-            </InternInfoDisplay>
-          </Col>
-          <Col>
-            <InternInfoDisplay
-              intern={sanjana}
-              onClick={() => {
-                let content = "This was also logged to the console";
-                console.log(content);
-                alert(content);
-              }}
-            >
-              <div>Hi, nice to meet you!</div>
-            </InternInfoDisplay>
-          </Col>
-        </Row>
-      </Container>
+let shayan = new Intern(
+  "Shayan",
+  "may the force be with you.",
+  "Frontend Web/Intern Lead",
+  "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+  new Date("9/8/20")
+);
+const App = () => {
+  const [show, setShow] = useState(false);
+  return(
+    <Container className="p-12">
+      <Jumbotron>
+        <h1 className="header">TurnUp React Playground</h1>
+        <Container fluid className="p-6">
+          <Row>
+            <Col>
+              <InternInfoDisplay
+                intern={amonte}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Hi, welcome.</div>
+              </InternInfoDisplay>
+            </Col>
+            <Col>
+              <InternInfoDisplay
+                intern={sanjana}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Hi, nice to meet you!</div>
+              </InternInfoDisplay>
+            </Col>
+          </Row>
+          <Row className='my-1'>
+            <Col>
+              <LightModal show={show}
+                          handleClose={() => setShow(false)}
+                          title="Hello Everyone" text="Woohoo, you're reading this text in a modal!">
+                <div className='badge badge-primary'>fun badge</div>
+              </LightModal>
+              <InternInfoDisplay
+                intern={shayan}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  setShow(true)
+                }}
+              >
+                <div>I'm excited to be here!</div>
+              </InternInfoDisplay>
+            </Col>
+          </Row>
+        </Container>
 
-      <ToastWrapper title="Welcome!">
+        <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
         </span>
-      </ToastWrapper>
-    </Jumbotron>
+        </ToastWrapper>
+      </Jumbotron>
 
-    <Jumbotron hidden>
-      <IncrementButton />
-    </Jumbotron>
+      <Jumbotron hidden>
+        <IncrementButton />
+      </Jumbotron>
 
-    <Jumbotron hidden>
-      <InputField />
-    </Jumbotron>
-  </Container>
-);
+      <Jumbotron hidden>
+        <InputField />
+      </Jumbotron>
+    </Container>
+  )
+};
 
 export default App;
