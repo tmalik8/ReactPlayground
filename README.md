@@ -57,7 +57,7 @@ Make sure you can run the app and the tests.
 
 Part 1 - Create React Bootstrap Component (https://react-bootstrap.github.io/)
 
-We’re going to practice creating react components using the react-bootstrap library. The components you create must make use of “props”.
+We’re going to practice creating react components using the react-bootstrap library. The components you create must make use of “props”. Create a functional component (as opposed to a class component).
 
 Part 2 - Create a unit test for your component (https://testing-library.com/docs/react-testing-library/intro / https://testing-library.com/docs/react-testing-library/cheatsheet)
 
