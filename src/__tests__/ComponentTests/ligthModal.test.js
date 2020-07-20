@@ -26,7 +26,7 @@ describe("lightModal tests", () => {
           <div>my test child</div>
         </LightModal>)
       expect(getByText('my test title')).toBeInTheDocument();
-      expect(getByText('my test title')).toBeInTheDocument();
+      expect(getByText('my test text')).toBeInTheDocument();
       expect(getByText('my test child')).toBeInTheDocument();
     });
   });
