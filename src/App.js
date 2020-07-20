@@ -11,18 +11,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom Components*/
 
-<<<<<<< HEAD
 import IncrementButton from './components/IncrementButton';
 import InputField from './components/InputField';
 import ToastWrapper from './components/ToastWrapper';
 import InternInfoDisplay from './components/InternInfoDisplay';
 import LanguageList from './components/LanguageList';
-=======
-import IncrementButton from "./components/IncrementButton";
-import InputField from "./components/InputField";
-import ToastWrapper from "./components/ToastWrapper";
-import InternInfoDisplay from "./components/InternInfoDisplay";
->>>>>>> development
+
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -41,6 +35,14 @@ let sanjana = new Intern(
   "https://picjumbo.com/wp-content/uploads/free-stock-photos-san-francisco-1080x720.jpg",
   new Date("8/21/20")
 );
+let kobayashi = new Intern(
+  "Kyle",
+  "Freshman at Grinnell College",
+  "Mobile Developer Intern",
+  "https://mymodernmet.com/wp/wp-content/uploads/2018/05/unsplash-free-stock-photography.jpg",
+  new Date("8/20/20")
+);
+
 
 const App = () => (
   <Container className="p-12">
