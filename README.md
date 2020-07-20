@@ -7,7 +7,7 @@ In order to use the NPM command in your terminal, make sure to download Node fir
 
 In this project, take the time to look through the React-Bootstrap library's Components tab. Implement the following components with State and Event Listeners in mind.  There are examples provided to help give you some ideas on how to structure your components. Have fun!
 
-https://react-bootstrap.github.io/components/
+https://react-bootstrap.github.io/
 
 
 
