@@ -45,9 +45,9 @@ let shayan = new Intern(
 );
 
 let sonia = new Intern(
-  "Sonia\n",
-  "Sophomore at UW",
-  "Frontend Web/Mobile",
+  "Sonia",
+  "Rising Sophomore at UW",
+  "Intern (Web/Mobile Dev)",
   "https://cdn.pixabay.com/photo/2015/07/17/18/01/portland-bill-849583_960_720.jpg",
   new Date("9/25/20")
 );
