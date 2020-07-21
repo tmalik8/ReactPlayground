@@ -16,7 +16,7 @@ import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
-import PopOver from "./components/PopOverButton";
+import PopOverTrigger from "./components/PopOverButton";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -107,9 +107,9 @@ const App = () => {
               They call me Mister Tibbs! 
               </div>
               </InternInfoDisplay>
-              <PopOver title="Hello Everyone" text="This is a fun popover" hidden>
+              <PopOverTrigger text="Click to see a popover">
                 <div>In Progress</div>
-              </PopOver>
+              </PopOverTrigger>
             </Col>         
           </Row>
         </Container>
