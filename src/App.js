@@ -19,7 +19,6 @@ import LightModal from "./components/lightModal";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
-import ImgButton from "./components/ImgButton";
 
 
 let amonte = new Intern(
