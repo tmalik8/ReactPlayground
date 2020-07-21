@@ -19,6 +19,7 @@ import LightModal from "./components/lightModal";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
+import ImgButton from "./components/ImgButton";
 
 
 let amonte = new Intern(
@@ -42,6 +43,15 @@ let shayan = new Intern(
   "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
   new Date("9/8/20")
 );
+
+let sonia = new Intern(
+  "Sonia\n",
+  "Sophomore at UW",
+  "Frontend Web/Mobile",
+  "https://cdn.pixabay.com/photo/2015/07/17/18/01/portland-bill-849583_960_720.jpg",
+  new Date("9/25/20")
+);
+
 const App = () => {
   const [show, setShow] = useState(false);
   return(
@@ -91,6 +101,18 @@ const App = () => {
                 }}
               >
                 <div>I'm excited to be here!</div>
+              </InternInfoDisplay>
+            </Col>
+            <Col>
+              <InternInfoDisplay
+                intern={sonia}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Hi!!</div>
               </InternInfoDisplay>
             </Col>
           </Row>
