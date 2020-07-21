@@ -16,6 +16,7 @@ import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
+import PopOverTrigger from "./components/PopOverButton";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -41,6 +42,13 @@ let shayan = new Intern(
   "Frontend Web/Intern Lead",
   "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
   new Date("9/8/20")
+);
+let adil = new Intern(
+  "Adil ",
+  "Rising Junior at UMB",
+  "Intern (Web/Mobile Dev)",
+  "https://www.cloudcms.com/images/quickstarts/react/react.df70b005.png",
+  new Date("7/20/20")
 );
 const App = () => {
   const [show, setShow] = useState(false);
@@ -93,9 +101,18 @@ const App = () => {
                 <div>I'm excited to be here!</div>
               </InternInfoDisplay>
             </Col>
+            <Col><InternInfoDisplay intern={adil} onClick={()=> { let content = "This was also logged to the console"; 
+            console.log(content); alert(content);}}>
+              <div>
+              They call me Mister Tibbs! 
+              </div>
+              </InternInfoDisplay>
+              <PopOverTrigger text="Click to see a popover">
+                <div>In Progress</div>
+              </PopOverTrigger>
+            </Col>         
           </Row>
         </Container>
-
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
