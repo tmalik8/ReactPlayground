@@ -42,6 +42,22 @@ let shayan = new Intern(
   "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
   new Date("9/8/20")
 );
+
+let sonia = new Intern(
+  "Sonia",
+  "Rising Sophomore at UW",
+  "Intern (Web/Mobile Dev)",
+  "https://cdn.pixabay.com/photo/2015/07/17/18/01/portland-bill-849583_960_720.jpg",
+  new Date("9/25/20")
+);
+
+let disha = new Intern (
+  "Disha",
+  "Believe in yourself",
+  "Intern (Mobile Developer)",
+  "https://wallpaperaccess.com/full/142733.jpg",
+  new Date("8/30/20")
+);
 const App = () => {
   const [show, setShow] = useState(false);
   return(
@@ -74,7 +90,7 @@ const App = () => {
                 <div>Hi, nice to meet you!</div>
               </InternInfoDisplay>
             </Col>
-          </Row>
+           </Row>
           <Row className='my-1'>
             <Col>
               <LightModal show={show}
@@ -93,7 +109,36 @@ const App = () => {
                 <div>I'm excited to be here!</div>
               </InternInfoDisplay>
             </Col>
+            <Col>
+              <InternInfoDisplay
+                intern={sonia}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Hi!!</div>
+              </InternInfoDisplay>
+            </Col>
           </Row>
+          <br>
+          </br>  
+          <Row className='my-1'>
+            <Col>
+            <InternInfoDisplay
+                intern={disha}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Happy to See you !!!</div>
+              </InternInfoDisplay>
+            </Col>
+          </Row>
+
         </Container>
 
         <ToastWrapper title="Welcome!">
