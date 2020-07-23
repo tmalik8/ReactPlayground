@@ -19,6 +19,8 @@ import LightModal from "./components/lightModal";
 import Greeting from "./components/Greeting";
 import NavBar from "./components/navBar"
 import PopOverTrigger from "./components/PopOverButton";
+import LanguageList from './components/LanguageList';
+
 
 /* Models/Services */
 
@@ -77,6 +79,15 @@ let adil = new Intern(
   "https://www.cloudcms.com/images/quickstarts/react/react.df70b005.png",
   new Date("7/20/20")
   );
+
+let kyle = new Intern(
+  "Kyle",
+  "Rising Sophomore at Grinnell College",
+  "Intern (Web/Mobile Dev)",
+  "https://www.psdstack.com/wp-content/uploads/2016/10/featured-copyright-free-mages.jpg",
+  new Date("8/20/20")
+);
+
 const App = () => {
   const [show, setShow] = useState(false);
   const NavTitle=['The PlayGround','Home','Meet the Interns','TurnUp Activism'];
@@ -151,9 +162,29 @@ const App = () => {
               <PopOverTrigger text="Click to see a popover">
                 <div>In Progress</div>
               </PopOverTrigger>
-            </Col>         
+            </Col>        
           </Row>
-<Row><Col>
+<Row>
+                   <Col>
+                <InternInfoDisplay
+                  intern={kyle}
+                  onClick={() => {
+                    let content = "This was also logged to the console";
+                    console.log(content);
+                    alert(content);
+                  }}>
+                  <div>Looking forward to working with you all</div>
+                  <br></br>
+                  <LanguageList languages = {[
+                { name: 'Java', key: '1'},
+                { name: 'JavaScript', key: '2'},
+                { name: 'Python', key: '3'},
+                { name: 'Swift', key: '4'},
+                { name: 'C', key: '5'},
+                ]} /> 
+                </InternInfoDisplay>
+              </Col> 
+                  <Col>
                    <InternInfoDisplay
                 intern={henry}
                 onClick={() => {
@@ -165,6 +196,7 @@ const App = () => {
                 <div>Excited to be working with you all!</div>
               </InternInfoDisplay></Col>
                   </Row>
+
         </Container>
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
