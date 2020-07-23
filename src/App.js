@@ -209,6 +209,7 @@ const App = () => {
               >
                 <div>Believt in yourself!</div>
               </InternInfoDisplay>
+              <br></br>
               <div><FadeText></FadeText></div>
             </Col>
            </Row>
