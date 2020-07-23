@@ -16,6 +16,7 @@ import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
+import Greeting from "./components/Greeting";
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -134,7 +135,7 @@ const App = () => {
                   alert(content);
                 }}
               >
-                <div>Happy to See you !!!</div>
+                <div>Happy to See you Friends!!!</div>
               </InternInfoDisplay>
             </Col>
           </Row>
