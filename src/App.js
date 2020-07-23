@@ -17,6 +17,9 @@ import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
 import Greeting from "./components/Greeting";
+import NavBar from "./components/navBar"
+import PopOverTrigger from "./components/PopOverButton";
+
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -44,6 +47,14 @@ let shayan = new Intern(
   new Date("9/8/20")
 );
 
+let henry = new Intern(
+  "Henry",
+  "From New York",
+  "Backend Web Intern",
+  "https://www.history.com/.image/t_share/MTU3ODc5MDgyNjY5OTc1MjYz/new-york-city.jpg",
+  new Date("9/1/20"));
+
+
 let sonia = new Intern(
   "Sonia",
   "Rising Sophomore at UW",
@@ -58,11 +69,20 @@ let disha = new Intern (
   "Intern (Mobile Developer)",
   "https://wallpaperaccess.com/full/142733.jpg",
   new Date("8/30/20")
-);
+  );
+let adil = new Intern(
+  "Adil ",
+  "Rising Junior at UMB",
+  "Intern (Web/Mobile Dev)",
+  "https://www.cloudcms.com/images/quickstarts/react/react.df70b005.png",
+  new Date("7/20/20")
+  );
 const App = () => {
   const [show, setShow] = useState(false);
+  const NavTitle=['The PlayGround','Home','Meet the Interns','TurnUp Activism'];
   return(
     <Container className="p-12">
+      <NavBar NavTitles= {NavTitle}/>
       <Jumbotron>
         <h1 className="header">TurnUp React Playground</h1>
         <Container fluid className="p-6">
@@ -122,26 +142,30 @@ const App = () => {
                 <div>Hi!!</div>
               </InternInfoDisplay>
             </Col>
+            <Col><InternInfoDisplay intern={adil} onClick={()=> { let content = "This was also logged to the console"; 
+            console.log(content); alert(content);}}>
+              <div>
+              They call me Mister Tibbs! 
+              </div>
+              </InternInfoDisplay>
+              <PopOverTrigger text="Click to see a popover">
+                <div>In Progress</div>
+              </PopOverTrigger>
+            </Col>         
           </Row>
-          <br>
-          </br>  
-          <Row className='my-1'>
-            <Col>
-            <InternInfoDisplay
-                intern={disha}
+<Row><Col>
+                   <InternInfoDisplay
+                intern={henry}
                 onClick={() => {
                   let content = "This was also logged to the console";
                   console.log(content);
                   alert(content);
                 }}
               >
-                <div>Happy to See you Friends!!!</div>
-              </InternInfoDisplay>
-            </Col>
-          </Row>
-
+                <div>Excited to be working with you all!</div>
+              </InternInfoDisplay></Col>
+                  </Row>
         </Container>
-
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
