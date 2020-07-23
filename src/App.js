@@ -31,7 +31,7 @@ let amonte = new Intern(
   "Amonte",
   "Just a regular Joe named Amonte.",
   "Intern Lead",
-  "https://media-exp1.licdn.com/dms/image/C5603AQEb3xbVkqos3A/profile-displayphoto-shrink_400_400/0?e=1600300800&v=beta&t=CsfxpsRe0NU7Rj2HybugKe0LS90IHLNtC3ES82mfmLA",
+  "https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg",
   new Date("1/1/21")
 );
 let sanjana = new Intern(
