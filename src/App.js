@@ -17,6 +17,8 @@ import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
 import NavBar from "./components/navBar"
+import PopOverTrigger from "./components/PopOverButton";
+
 /* Models/Services */
 
 import { Intern } from "./model/Intern";
@@ -43,12 +45,30 @@ let shayan = new Intern(
   "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
   new Date("9/8/20")
 );
+
 let henry = new Intern(
   "Henry",
   "From New York",
   "Backend Web Intern",
   "https://www.history.com/.image/t_share/MTU3ODc5MDgyNjY5OTc1MjYz/new-york-city.jpg",
   new Date("9/1/20")
+
+
+let sonia = new Intern(
+  "Sonia",
+  "Rising Sophomore at UW",
+  "Intern (Web/Mobile Dev)",
+  "https://cdn.pixabay.com/photo/2015/07/17/18/01/portland-bill-849583_960_720.jpg",
+  new Date("9/25/20")
+);
+
+let adil = new Intern(
+  "Adil ",
+  "Rising Junior at UMB",
+  "Intern (Web/Mobile Dev)",
+  "https://www.cloudcms.com/images/quickstarts/react/react.df70b005.png",
+  new Date("7/20/20")
+
 );
 const App = () => {
   const [show, setShow] = useState(false);
@@ -105,6 +125,29 @@ const App = () => {
             </Col>
             <Col>
               <InternInfoDisplay
+                intern={sonia}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Hi!!</div>
+              </InternInfoDisplay>
+            </Col>
+            <Col><InternInfoDisplay intern={adil} onClick={()=> { let content = "This was also logged to the console"; 
+            console.log(content); alert(content);}}>
+              <div>
+              They call me Mister Tibbs! 
+              </div>
+              </InternInfoDisplay>
+              <PopOverTrigger text="Click to see a popover">
+                <div>In Progress</div>
+              </PopOverTrigger>
+            </Col>         
+          </Row>
+<Row><Col>
+                   <InternInfoDisplay
                 intern={henry}
                 onClick={() => {
                   let content = "This was also logged to the console";
@@ -113,11 +156,9 @@ const App = () => {
                 }}
               >
                 <div>Excited to be working with you all!</div>
-              </InternInfoDisplay>
-            </Col>
-          </Row>
+              </InternInfoDisplay></Col>
+                  </Row>
         </Container>
-
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
