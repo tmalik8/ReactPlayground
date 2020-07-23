@@ -51,7 +51,7 @@ let henry = new Intern(
   "From New York",
   "Backend Web Intern",
   "https://www.history.com/.image/t_share/MTU3ODc5MDgyNjY5OTc1MjYz/new-york-city.jpg",
-  new Date("9/1/20")
+  new Date("9/1/20"));
 
 
 let sonia = new Intern(
