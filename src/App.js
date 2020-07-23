@@ -16,7 +16,7 @@ import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
-import Greeting from "./components/Greeting";
+import FadeText from "./components/FadeText";
 import NavBar from "./components/navBar"
 import PopOverTrigger from "./components/PopOverButton";
 import LanguageList from './components/LanguageList';
@@ -196,7 +196,22 @@ const App = () => {
                 <div>Excited to be working with you all!</div>
               </InternInfoDisplay></Col>
                   </Row>
-
+              <br></br>
+              <Row className='my-1'>
+              <Col>
+              <InternInfoDisplay
+                intern={disha}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Believt in yourself!</div>
+              </InternInfoDisplay>
+              <div><FadeText></FadeText></div>
+            </Col>
+           </Row>
         </Container>
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
