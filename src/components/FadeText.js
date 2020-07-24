@@ -16,7 +16,7 @@ function FadeText() {
       >
         Toggle text
       </Button>
-      <Fade in={open}>
+      <Fade in={open} id="fade-parent" >
         <div id="example-fade-text">
        <p id="fadeTest"> This content will fade in and out as the button is pressed.</p>
         </div>
