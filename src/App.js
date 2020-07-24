@@ -16,6 +16,7 @@ import InputField from "./components/InputField";
 import ToastWrapper from "./components/ToastWrapper";
 import InternInfoDisplay from "./components/InternInfoDisplay";
 import LightModal from "./components/lightModal";
+import FadeText from "./components/FadeText";
 import NavBar from "./components/navBar"
 import PopOverTrigger from "./components/PopOverButton";
 import LanguageList from './components/LanguageList';
@@ -64,14 +65,20 @@ let sonia = new Intern(
   new Date("9/25/20")
 );
 
+let disha = new Intern (
+  "Disha",
+  "Believe in yourself",
+  "Intern (Mobile Developer)",
+  "https://wallpaperaccess.com/full/142733.jpg",
+  new Date("8/30/20")
+  );
 let adil = new Intern(
   "Adil ",
   "Rising Junior at UMB",
   "Intern (Web/Mobile Dev)",
   "https://www.cloudcms.com/images/quickstarts/react/react.df70b005.png",
   new Date("7/20/20")
-
-);
+  );
 
 let kyle = new Intern(
   "Kyle",
@@ -115,7 +122,7 @@ const App = () => {
                 <div>Hi, nice to meet you!</div>
               </InternInfoDisplay>
             </Col>
-          </Row>
+           </Row>
           <Row className='my-1'>
             <Col>
               <LightModal show={show}
@@ -189,7 +196,23 @@ const App = () => {
                 <div>Excited to be working with you all!</div>
               </InternInfoDisplay></Col>
                   </Row>
-
+              <br></br>
+              <Row className='my-1'>
+              <Col>
+              <InternInfoDisplay
+                intern={disha}
+                onClick={() => {
+                  let content = "This was also logged to the console";
+                  console.log(content);
+                  alert(content);
+                }}
+              >
+                <div>Believt in yourself!</div>
+              </InternInfoDisplay>
+              <br></br>
+              <div><FadeText></FadeText></div>
+            </Col>
+           </Row>
         </Container>
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
