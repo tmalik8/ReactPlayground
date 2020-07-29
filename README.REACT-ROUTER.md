@@ -6,7 +6,7 @@ In this guide you will learn about react-router.
 
 ### Installation
 
-Make sure you are repository has the latest update and is synced with Turnout-Activism/ReactPlayground development branch
+Make sure your repository has the latest update and is synced with Turnout-Activism/ReactPlayground development branch
 
 ```shell script
 git pull upstream development
