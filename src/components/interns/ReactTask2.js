@@ -4,12 +4,12 @@
 import React from 'react';
 import {Jumbotron} from "react-bootstrap";
 
-const ShayanPage = () => {
+const ReactTask2 = () => {
   return (
     <Jumbotron>
       <h1 className="display-4">Hello, Interns</h1>
       <p className="lead">
-        Welcome to Shayan's page. Here you can find all about him.
+        Welcome to the React's task 2. Here you can find all about him.
       </p>
       <p> I am a full stack web developer passionate about Javascript, React.js, and Next.js</p>
       <p> Feel free to DM me on Slack If you have any question, or comment about this assignment or anything in
@@ -28,4 +28,4 @@ const ShayanPage = () => {
   );
 };
 
-export default ShayanPage;
+export default ReactTask2;

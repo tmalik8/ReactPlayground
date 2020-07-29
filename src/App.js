@@ -13,7 +13,7 @@ import Container from "react-bootstrap/Container";
 import Navigation from "./components/Navigation";
 import Playground from "./components/Playground";
 import PageNotFound from "./components/PageNotFound";
-import ShayanPage from "./components/interns/ShayanPage";
+import ReactTask2 from "./components/interns/ReactTask2";
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
       <Container className="my-4">
         <Switch>
           <Route path='/' exact component={Playground}/>
-          <Route path='/interns/shayan' component={ShayanPage}/>
+          <Route path='/interns/reacttask2' component={ReactTask2}/>
           <Route component={PageNotFound}/>
         </Switch>
       </Container>

@@ -2,27 +2,25 @@
 
 ## A Hands-on Guide on React Router
 
-In the first half of this guide you will learn about react router. In the second half we will discuss what you will need to do for this assignment.
+In this guide you will learn about react-router.
 
 ### Installation
 
-If you want to create a react app with routing from scratch using `create-react-app` you will run
+Make sure you are repository has the latest update and is synced with Turnout-Activism/ReactPlayground
 
-```sh
-npx create-react-app my-react-app-with-router
-cd my-react-app-with-router
-npm i react-router-dom
+```shell script
+git pull upstream development
 ```
 
-Additionally if you want typescript or better intellisense you can install `@types/react-router` as dev dependencies.
+In order to install dependencies simply run
 
-```sh
-npm i -D @types/react-router
+```shell script
+npm i 
 ```
 
 ### Setup
 
-Now that you have everything set up let's quickly go over a simple react app with router. If you have experience working with HTML, you would know HTML files are static web pages and in order to navigate between them you would use something like:
+Now that you have everything set up let's quickly go over a simple React app with Router. If you have experience working with HTML, you would know HTML files are static web pages and in order to navigate between them you would use something like:
 
 ```html
 <a href="website-uri/page2">page 2</a>
@@ -83,11 +81,11 @@ import { Link } from "react-router-dom";
 
 Notice that we are not using anchor tags like `<a href='/about'></a>` but a `Link` component provided by react router. If we use anchor tag in our Navigation, we are still able to navigate to the destination path since our `App.js` knows how to handle the URL, but using `Link` has a big advantage over anchor tag. It does not load and re-render the whole page again. It only renders the components that we asked for and unmount any component that is navigated away. For example if you are at the **home page** and want to navigate to the **about page** using the `Link` component, the `Home` component will be unmounted and the `About` component will be mounted into our `App` without having to reload the whole page again.
 
-Now that is it for the most part. There are still things that left uncovered but we will not deal with them for now (or maybe never for this project).
+Now that was it for the most part. There are still things that left uncovered, but we will not deal with them for now (or maybe never for this project).
 
 ## Your Task
 
-For this project React router is already set up for you. For this assignment `App.js` serves as our main page. Any additional component/page needs to be registered at `App.js`. Look at how we structured `App.js`. Here is what you need to do.
+For this assignment `App.js` serves as our main page. Any additional component/page needs to be registered at `App.js`. Look at how we structured `App.js`. Here is what you need to do.
 
 - Create a Component in `components/interns` and name it `internNamePage`.
 - Customize your component/page however you want (add personal information etc).
