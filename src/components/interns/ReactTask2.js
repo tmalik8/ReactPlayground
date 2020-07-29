@@ -9,7 +9,7 @@ const ReactTask2 = () => {
     <Jumbotron>
       <h1 className="display-4">Hello, Interns</h1>
       <p className="lead">
-        Welcome to the React's task 2. Here you can find all about him.
+        Welcome to the React's task 2.
       </p>
       <hr className="my-4"/>
       <h2>Your Task</h2>
