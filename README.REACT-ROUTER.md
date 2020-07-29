@@ -76,7 +76,7 @@ now let's look at our `Navigation.js` component.
 import { Link } from "react-router-dom";
 <navbar>
   <Link to="/">Home</Link>
-  <Link to="/about">Shayan</Link>
+  <Link to="/about">About</Link>
   <Link to="/interns/interName">interName</Link>
 </navbar>;
 ```
