@@ -11,18 +11,24 @@ const ReactTask2 = () => {
       <p className="lead">
         Welcome to the React's task 2. Here you can find all about him.
       </p>
-      <p> I am a full stack web developer passionate about Javascript, React.js, and Next.js</p>
-      <p> Feel free to DM me on Slack If you have any question, or comment about this assignment or anything in
-        general.</p>
       <hr className="my-4"/>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+      <h2>Your Task</h2>
+
+      <p>
+        For this assignment App.js serves as our main page. Any additional components/page need to be registered at
+        App.js. Look at how we structured App.js.
       </p>
+      <ul>
+        <li>Create a Component in components/interns and name it internNamePag`.</li>
+        <li>Customize your component/page however you want (add personal information etc).</li>
+        <li>If you want to add custom styling, you can add it in styles/app.css.</li>
+        <li>Register the path /interns/internName with your component in Route.</li>
+        <li>Add a Link to your component/page in the Navigation.js under the NavDropdown.</li>
+      </ul>
       <p className="lead">
-        <a className="btn btn-primary btn-lg" href="/#" role="button">Learn more</a>
+        <a className="btn btn-primary" href="https://reactrouter.com/web/api/Hooks" role="button">
+          Learn more about React Router
+        </a>
       </p>
     </Jumbotron>
   );

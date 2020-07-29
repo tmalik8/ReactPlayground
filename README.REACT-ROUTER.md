@@ -83,14 +83,4 @@ Notice that we are not using anchor tags like `<a href='/about'></a>` but a `Lin
 
 Now that was it for the most part. There are still things that left uncovered, but we will not deal with them for now (or maybe never for this project).
 
-## Your Task
 
-For this assignment `App.js` serves as our main page. Any additional component/page needs to be registered at `App.js`. Look at how we structured `App.js`. Here is what you need to do.
-
-- Create a Component in `components/interns` and name it `internNamePage`.
-- Customize your component/page however you want (add personal information etc).
-- If you want to add custom styling, you can add it in `styles/app.css`.
-- Register the path `/interns/internName` with your component in `Route`.
-- Add a Link to your component/page in the `Navigation.js` under the `NavDropdown`.
-
-That is it. 
