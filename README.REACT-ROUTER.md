@@ -85,4 +85,4 @@ Now that was it for the most part. There are still things that left uncovered, b
 
 ## React Router Task
 
-To know about this assignment run the app by `npm start`. In the Navigation bar look for `Interns` Dropdown and navigate to `React Task 2`.
+For this assignment run the app by `npm start`. In the Navigation bar look for `Interns` Dropdown and navigate to `React Task 2`.

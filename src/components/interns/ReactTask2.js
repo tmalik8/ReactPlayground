@@ -19,7 +19,7 @@ const ReactTask2 = () => {
         App.js. Look at how we structured App.js.
       </p>
       <ul>
-        <li>Create a Component in components/interns and name it internNamePag`.</li>
+        <li>Create a Component in components/interns and name it internNamePage`.</li>
         <li>Customize your component/page however you want (add personal information etc).</li>
         <li>If you want to add custom styling, you can add it in styles/app.css.</li>
         <li>Register the path /interns/internName with your component in Route.</li>
