@@ -1,98 +1,68 @@
-# Welcome to the React Router Playground
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome to the React Playground
 
-## A Hands-on Guide on React Router
+REMEMBER TO NPM INSTALL FIRST TO MAKE SURE YOUR DEPENDENCIES ARE UP TO DATE.
 
-In the first half of this guide you will learn about react router. In the second half we will discuss what you will need to do for this assignment.
+In order to use the NPM command in your terminal, make sure to download Node first https://nodejs.org/en/download/
 
-### Installation
+In this project, take the time to look through the React-Bootstrap library's Components tab. Implement the following components with State and Event Listeners in mind.  There are examples provided to help give you some ideas on how to structure your components. Have fun!
 
-If you want to create a react app with routing from scratch using `create-react-app` you will run
+https://react-bootstrap.github.io/
 
-```sh
-npx create-react-app my-react-app-with-router
-cd my-react-app-with-router
-npm i react-router-dom
+
+
+### Running Tests
+
+```console
+npm test 
 ```
 
-Additionally if you want typescript or better intellisense you can install `@types/react-router` as dev dependencies.
+This will run any tests in the __tests__ folder, as long as they end in test.js or .js. Place your test files here. 
 
-```sh
-npm i -D @types/react-router
-```
+Note: the tests run on Jest (not Mocha). 
 
-### Setup
+Once you've run this command, you'll have to kill the process with ctrl + C. 
 
-Now that you have everything set up let's quickly go over a simple react app with router. If you have experience working with HTML, you would know HTML files are static web pages and in order to navigate between them you would use something like:
+Otherwise, it will keep running and any changes you make a file will cause the tests to re-run.
 
-```html
-<a href="website-uri/page2">page 2</a>
-```
 
-in your `page 1`.
+### Running the App
 
-Now a react.js app is a single page application, meaning there is no way for you to define multiple static pages.(unless you would use appropriate plugins and frameworks to create static pages). For us to be able to enjoy navigation we need to use react router. react router will query and load the components and we can treat them as pages. Here is the very foundation of every react app with router setup.
+To start, run 'npm start' in your preferred terminal.
 
-**App.js**
+Note: Any changes you make to the code while this action is running will cause the app to rebuild. This allows for modifying the code and being able to immediately see the changes in the browser. To kill this process, hit ctrl + C in the terminal.
 
-```js
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-const App = () => {
-  return (
-    <>
-      <BrowserRouter>
-        <Navigation />
-        <Container className="my-4">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/interns/internName" component={internNamePage} />
-            <Route component={PageNotFound} />
-          </Switch>
-        </Container>
-      </BrowserRouter>
-      <Footer />
-    </>
-  );
-};
-```
 
-### Route
+### Assignments
 
-`Route` is the most important component that you will need to learn about. it assigns and renders a component to a path. for example if user hits "www.turnup.com/about" we will render `About` component into or `Container` in `App.js`. [Find more about Route](https://reactrouter.com/web/api/Route)
+#### React Focus
+##### Task 1
 
-### Switch
+This takes place on a new repository that is not open to commits from the public. So you’ll have to fork it.
 
-`Switch` only renders the first component that matches the route. We wrap `Switch` around our `Rout`s to make sure only one page would load at a time. [more on Switch](https://reactrouter.com/web/api/Switch)
+The “head” branch will be development. This means you always want to fetch changes from development before beginning work.
 
-> In the above example, since we have not specified a path for the last `<Route component={PageNotFound} />` it will be loaded if `switch` cannot match the queried URL with any of the defined paths. That means the page is not found will be loaded for any path that does not exist in our setup.
+Once you’ve fetched and merged into your development branch, start a new branch that is appropriately named to describe what changes you’re making.
 
-#### BrowserRouter
 
-we will use `BrowserRouter` as a wrapper around any component that needs to use navigation or be used as route. `BrowserRouter` keeps track of things such as history or the behavior of navigation. If you want to read more about this [read this up](https://reactrouter.com/web/api/BrowserRouter).
+The assignment for everyone is as follows:
 
-now let's look at our `Navigation.js` component.
+Part 0 - Familiarize yourself with the application structure. I haven't a great resource for this yet but here are some options:
 
-```js
-import { Link } from "react-router-dom";
-<navbar>
-  <Link to="/">Home</Link>
-  <Link to="/about">Shayan</Link>
-  <Link to="/interns/interName">interName</Link>
-</navbar>;
-```
+https://www.pluralsight.com/guides/file-structure-react-applications-created-create-react-app
+https://dev.to/amirmoh10/understanding-the-react-build-workflow-and-the-folder-structure-3hlc
 
-Notice that we are not using anchor tags like `<a href='/about'></a>` but a `Link` component provided by react router. If we use anchor tag in our Navigation, we are still able to navigate to the destination path since our `App.js` knows how to handle the URL, but using `Link` has a big advantage over anchor tag. It does not load and re-render the whole page again. It only renders the components that we asked for and unmount any component that is navigated away. For example if you are at the **home page** and want to navigate to the **about page** using the `Link` component, the `Home` component will be unmounted and the `About` component will be mounted into our `App` without having to reload the whole page again.
+Make sure you can run the app and the tests.
 
-Now that is it for the most part. There are still things that left uncovered but we will not deal with them for now (or maybe never for this project).
 
-## Your Task
+Part 1 - Create React Bootstrap Component (https://react-bootstrap.github.io/)
 
-In this project `App.js` serves as our main page. Any additional component/page needs to be registered here. Look at how we structured `App.js`. Here is what you need to do.
+We’re going to practice creating react components using the react-bootstrap library. The components you create must make use of “props”. Create a functional component (as opposed to a class component).
 
-- Create a Component in `components/interns` and name it `internNamePage`.
-- Customize your component/page however you want (add personal information etc).
-- If you want to add custom styling, you can add it in `styles/app.css`.
-- Register the path `/interns/internName` with your component in `Route`.
-- Add a Link to your component/page in the `Navigation.js` under the `NavDropdown`.
+Part 2 - Create a unit test for your component (https://testing-library.com/docs/react-testing-library/intro / https://testing-library.com/docs/react-testing-library/cheatsheet)
 
-That is it. 
+Note, there is a test that runs that checks that everything in the App.js component can render. But we want to test the specifics of your component. 
+
+Part 3 - Make use of the InternInfoDisplay component to display information about yourself on the site.
+
+These should all be nested under a branch. You can name it *yourname*-react-task1.

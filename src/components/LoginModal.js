@@ -39,8 +39,8 @@ const LoginModal = ({show, handleClose}) => {
         </Button>
       </Modal.Body>
       <Modal.Footer style={{justifyContent: 'flex-start'}}>
-        <div style={{color: '#919aa1'}}>Don't have an account? <a href='#'>Sign up</a></div>
-        <a href='#'>Forgot your password?</a>
+        <div style={{color: '#919aa1'}}>Don't have an account? <a href='/#'>Sign up</a></div>
+        <a href='/#'>Forgot your password?</a>
       </Modal.Footer>
     </Modal>
   );
