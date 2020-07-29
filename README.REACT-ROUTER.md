@@ -87,7 +87,7 @@ Now that is it for the most part. There are still things that left uncovered but
 
 ## Your Task
 
-In this project `App.js` serves as our main page. Any additional component/page needs to be registered here. Look at how we structured `App.js`. Here is what you need to do.
+For this project React router is already set up for you. For this assignment `App.js` serves as our main page. Any additional component/page needs to be registered at `App.js`. Look at how we structured `App.js`. Here is what you need to do.
 
 - Create a Component in `components/interns` and name it `internNamePage`.
 - Customize your component/page however you want (add personal information etc).
