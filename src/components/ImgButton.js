@@ -28,6 +28,7 @@ function ImgButton() {
           <Button onClick={changeImg}>
               Click To See a Random Dog
           </Button>
+          <br/>
           <img id="dogImg" hidden src={imgSrc} alt="dog" />
       </Container>
   );
