@@ -12,7 +12,7 @@ import '../styles/navigation.css';
 
 const Navigation = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <Navbar variant="dark" expand="lg" className="navbar navbar-expand-lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="center-navbar m-auto">
