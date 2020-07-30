@@ -6,11 +6,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Link from "react-router-dom/Link";
+import Image from 'react-bootstrap/Image'
 
 const Navigation = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <Link className="navbar-brand" to='/'>TurnUp Activism</Link>
+      <Link className="navbar-brand" to='/'>
+        <Image className="align-top" alt="TurnUp Activism" src={require('../resources/turnUpLogo.png')} width="150" height="60"/>
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
