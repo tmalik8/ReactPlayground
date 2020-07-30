@@ -14,6 +14,7 @@ import Navigation from "./components/Navigation";
 import Playground from "./components/Playground";
 import PageNotFound from "./components/PageNotFound";
 import ReactTask2 from "./components/interns/ReactTask2";
+import soniaPage from "./components/interns/soniaPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Switch>
           <Route path='/' exact component={Playground}/>
           <Route path='/interns/reacttask2' component={ReactTask2}/>
+          <Route path="/interns/soniaPage" component={soniaPage}/>
           <Route component={PageNotFound}/>
         </Switch>
       </Container>

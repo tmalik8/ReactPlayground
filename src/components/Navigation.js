@@ -17,6 +17,7 @@ const Navigation = () => {
           <Link className="nav-link" to='/conversations'>Conversations</Link>
           <NavDropdown title="Interns" id="basic-nav-dropdown">
             <Link className="dropdown-item" to='/interns/reacttask2'>React Task 2</Link>
+            <Link className="dropdown-item" to="/interns/soniaPage">Sonia's Page</Link>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
