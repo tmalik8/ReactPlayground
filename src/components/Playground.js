@@ -92,13 +92,18 @@ const Playground = () => {
   const [show, setShow] = useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
-    <Container className="p-12">
+    <Container>
       <NavBar NavTitles={NavTitle}/>
       <Jumbotron>
         <h1 className="header">TurnUp React Playground</h1>
-        <Container fluid className="p-6">
-          <Row>
-            <Col>
+        <ToastWrapper title="Welcome!">
+        <span role="img" aria-label="tada">
+          🎉 🎉 🎉 🎉
+        </span>
+        </ToastWrapper>
+        <Container>
+          <Row xs={1} md={2} lg={3} className='justify-content-center'>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={amonte}
                 onClick={() => {
@@ -110,7 +115,7 @@ const Playground = () => {
                 <div>Hi, welcome.</div>
               </InternInfoDisplay>
             </Col>
-            <Col>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={sanjana}
                 onClick={() => {
@@ -122,9 +127,7 @@ const Playground = () => {
                 <div>Hi, nice to meet you!</div>
               </InternInfoDisplay>
             </Col>
-          </Row>
-          <Row className='my-1'>
-            <Col>
+            <Col className="my-3">
               <LightModal show={show}
                           handleClose={() => setShow(false)}
                           title="Hello Everyone" text="Woohoo, you're reading this text in a modal!">
@@ -141,7 +144,7 @@ const Playground = () => {
                 <div>I'm excited to be here!</div>
               </InternInfoDisplay>
             </Col>
-            <Col>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={sonia}
                 onClick={() => {
@@ -153,22 +156,21 @@ const Playground = () => {
                 <div>Hi!!</div>
               </InternInfoDisplay>
             </Col>
-            <Col><InternInfoDisplay intern={adil} onClick={() => {
-              let content = "This was also logged to the console";
-              console.log(content);
-              alert(content);
-            }}>
-              <div>
-                They call me Mister Tibbs!
-              </div>
-            </InternInfoDisplay>
+            <Col className="my-3">
+              <InternInfoDisplay intern={adil} onClick={() => {
+                let content = "This was also logged to the console";
+                console.log(content);
+                alert(content);
+              }}>
+                <div>
+                  They call me Mister Tibbs!
+                </div>
+              </InternInfoDisplay>
               <PopOverTrigger text="Click to see a popover">
                 <div>In Progress</div>
               </PopOverTrigger>
             </Col>
-          </Row>
-          <Row>
-            <Col>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={kyle}
                 onClick={() => {
@@ -187,7 +189,7 @@ const Playground = () => {
                 ]}/>
               </InternInfoDisplay>
             </Col>
-            <Col>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={henry}
                 onClick={() => {
@@ -198,10 +200,7 @@ const Playground = () => {
               >
                 <div>Excited to be working with you all!</div>
               </InternInfoDisplay></Col>
-          </Row>
-          <br></br>
-          <Row className='my-1'>
-            <Col>
+            <Col className="my-3">
               <InternInfoDisplay
                 intern={disha}
                 onClick={() => {
@@ -217,11 +216,6 @@ const Playground = () => {
             </Col>
           </Row>
         </Container>
-        <ToastWrapper title="Welcome!">
-        <span role="img" aria-label="tada">
-          🎉 🎉 🎉 🎉
-        </span>
-        </ToastWrapper>
       </Jumbotron>
 
       <Jumbotron hidden>
