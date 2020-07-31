@@ -1,5 +1,5 @@
 /**
- * @author Henry C. 
+ * @author Henry C.
  */
 import React from 'react';
 import {Navbar, Nav,Form, FormControl, Button} from 'react-bootstrap';
@@ -17,9 +17,10 @@ const NavBar =({NavTitles}) =>{
     }
 
     return(
-        
-        <Navbar bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="#home"> {Titles[0]}</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
                 {NavLink}
             </Nav>
@@ -27,6 +28,7 @@ const NavBar =({NavTitles}) =>{
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                 <Button variant="outline-light">Search</Button>
             </Form>
+            </Navbar.Collapse>
         </Navbar>
 
     )

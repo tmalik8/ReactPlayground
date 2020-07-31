@@ -15,7 +15,7 @@ const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
         )
     }
 
-    let _onClick = () => {alert("No overload was passed in. So here we are.")}; 
+    let _onClick = () => {alert("No overload was passed in. So here we are.")};
     //handle the condition where no onclick was passed in
     if (onClick !== undefined)
     {
@@ -23,7 +23,7 @@ const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
     }
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card >
             <Card.Img variant="top" src={intern.ImgSource} />
             <Card.Body>
                 <Card.Title>{intern.Name}<Badge variant="secondary">{intern.Team}</Badge></Card.Title>
