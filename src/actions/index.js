@@ -1,7 +1,6 @@
-export const increment = (nr) => {
+export const increment = () => {
     return {
         type: 'INCREMENT',
-        value: nr
     }
 }
 

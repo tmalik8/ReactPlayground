@@ -8,9 +8,6 @@ import './styles/app.css';
 /**React Components */
 import Container from "react-bootstrap/Container";
 
-/**React-Redux Components */
-import { useSelector, useDispatch, Provider } from'react-redux';
-
 /* Custom Components*/
 import Navigation from "./components/Navigation";
 import Playground from "./components/Playground";
@@ -18,15 +15,8 @@ import PageNotFound from "./components/PageNotFound";
 import ReactTask2 from "./components/interns/ReactTask2";
 import soniaPage from "./components/interns/soniaPage";
 
-//STORE
-import configureStore from "./store";
-
-//ACTIONS
-import { increment, decrement } from './actions';
-
-const store = configureStore();
-
 const App = () => {
+
   return (
     <BrowserRouter>
       <Navigation/>
@@ -36,7 +26,6 @@ const App = () => {
           <Route path='/interns/reacttask2' component={ReactTask2}/>
           <Route path="/interns/soniaPage" component={soniaPage}/>
           <Route component={PageNotFound}/>
-
         </Switch>
       </Container>
     </BrowserRouter>

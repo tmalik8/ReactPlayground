@@ -26,6 +26,12 @@ import LanguageList from './LanguageList';
 
 import {Intern} from "../model/Intern";
 
+/**React-Redux Components */
+import { useSelector, useDispatch } from 'react-redux';
+
+//ACTIONS
+import { increment, decrement } from '../actions';
+
 
 let amonte = new Intern(
   "Amonte",
@@ -89,6 +95,10 @@ let kyle = new Intern(
 );
 
 const Playground = () => {
+
+  const counter = useSelector(state => state.counter);
+  const dispatch = useDispatch();
+
   const [show, setShow] = useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
@@ -101,6 +111,9 @@ const Playground = () => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <h1>Counter {counter} </h1>
+        <button onClick={() => dispatch(increment())}>+</button>
+        <button onClick={() => dispatch(decrement())}>-</button>
         <Container>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
