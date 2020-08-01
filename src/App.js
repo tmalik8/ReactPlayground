@@ -21,6 +21,9 @@ import soniaPage from "./components/interns/soniaPage";
 //STORE
 import configureStore from "./store";
 
+//ACTIONS
+import { increment, decrement } from './actions';
+
 const store = configureStore();
 
 const App = () => {
