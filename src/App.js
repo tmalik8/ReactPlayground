@@ -8,6 +8,8 @@ import './styles/app.css';
 /**React Components */
 import Container from "react-bootstrap/Container";
 
+/**React-Redux Components */
+import { useSelector, useDispatch, Provider } from'react-redux';
 
 /* Custom Components*/
 import Navigation from "./components/Navigation";
@@ -26,6 +28,7 @@ const App = () => {
           <Route path='/interns/reacttask2' component={ReactTask2}/>
           <Route path="/interns/soniaPage" component={soniaPage}/>
           <Route component={PageNotFound}/>
+
         </Switch>
       </Container>
     </BrowserRouter>
