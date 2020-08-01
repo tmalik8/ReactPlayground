@@ -18,6 +18,11 @@ import PageNotFound from "./components/PageNotFound";
 import ReactTask2 from "./components/interns/ReactTask2";
 import soniaPage from "./components/interns/soniaPage";
 
+//STORE
+import configureStore from "./store";
+
+const store = configureStore();
+
 const App = () => {
   return (
     <BrowserRouter>
