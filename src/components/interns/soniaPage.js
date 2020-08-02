@@ -10,9 +10,6 @@ import { increment, decrement } from '../../actions';
 
 function soniaPage(props) {
 
-  // const counter = useSelector(state => state.counter);
-  // const dispatch = useDispatch();
-
   return (
       <Jumbotron>
           <h1>Sonia's Task 2 Routing Page</h1>
