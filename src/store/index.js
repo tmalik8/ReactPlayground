@@ -1,11 +1,20 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import allReducers from '../reducers/index';
+import { watchIncrement } from '../sagas/saga'
+
+//**Redux-Saga Components */
+import createSagaMiddleware from 'redux-saga';
 
 const configureStore = () => {
+
+    const sagaMiddleware = createSagaMiddleware();
+
     const store = createStore(
         allReducers,
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        applyMiddleware(sagaMiddleware),
     );
+
+    sagaMiddleware.run(watchIncrement);
 
     return store;
 }
