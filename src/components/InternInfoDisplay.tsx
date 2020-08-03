@@ -26,7 +26,7 @@ const InternInfoDisplay = ({intern,onClick,children}:InternViewModel) => {
         <Card >
             <Card.Img variant="top" src={intern.ImgSource} />
             <Card.Body>
-                <Card.Title>{intern.Name} <br/><Badge variant="secondary">{intern.Team}</Badge></Card.Title>
+                <Card.Title>{intern.Name}<Badge variant="secondary">{intern.Team}</Badge></Card.Title>
                 <Card.Text>
                     {intern.Description}
                 </Card.Text>

@@ -8,7 +8,7 @@ import { useState } from 'react';
 function FadeText() {
   const [open, setOpen] = useState(true);
     return (
-      <Container className="moveLeft">
+      <Container>
       <Button
         onClick={() => setOpen(!open)}
         aria-controls="example-fade-text"
