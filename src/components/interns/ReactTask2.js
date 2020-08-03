@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import {Jumbotron} from "react-bootstrap";
+import {Alert} from "react-bootstrap"
 
 const ReactTask2 = () => {
   return (
@@ -20,7 +21,9 @@ const ReactTask2 = () => {
       </p>
       <ul>
         <li>Create a Component in components/interns and name it internNamePage`.</li>
-        <li>Customize your component/page however you want (add personal information etc).</li>
+        <li>Customize your component/page however you want (add personal information etc). <Alert variant="warning">At a minimum, resuse the InternInfoDisplay component. When reusing the component, try to overload the button's onclick behavior. </Alert>
+        
+         </li>
         <li>If you want to add custom styling, you can add it in styles/app.css.</li>
         <li>Register the path /interns/internName with your component in Route.</li>
         <li>Add a Link to your component/page in the Navigation.js under the NavDropdown.</li>
