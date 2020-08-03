@@ -27,7 +27,7 @@ import LanguageList from './LanguageList';
 import {Intern} from "../model/Intern";
 
 /**React-Redux Components */
-import { useDispatch, connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 //ACTIONS
 import { increment, decrement } from '../actions';
