@@ -33,8 +33,6 @@ import { connect } from 'react-redux';
 
 //ACTIONS
 import { increment, decrement } from '../actions';
-// import JokeModal from "./JokeModal";
-
 
 let amonte = new Intern(
   "Amonte",
