@@ -21,6 +21,7 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
+import PeopleComponent from "./PeopleComponent";
 
 
 
@@ -107,6 +108,8 @@ const Playground = () => {
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
     <Container>
+      <PeopleComponent />
+      <PeopleComponent />
       <NavBar NavTitles={NavTitle}/>
       <Jumbotron>
         <h1 className="header">TurnUp React Playground</h1>
