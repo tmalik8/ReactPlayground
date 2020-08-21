@@ -108,8 +108,6 @@ const Playground = () => {
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
     <Container>
-      <PeopleComponent />
-      <PeopleComponent />
       <NavBar NavTitles={NavTitle}/>
       <Jumbotron>
         <h1 className="header">TurnUp React Playground</h1>
@@ -205,6 +203,8 @@ const Playground = () => {
                   {name: 'Swift', key: '4'},
                   {name: 'C', key: '5'},
                 ]}/>
+                <PeopleComponent />
+                <PeopleComponent />
               </InternInfoDisplay>
             </Col>
             <Col className="my-3">
