@@ -13,7 +13,7 @@ const MissionsCarousel = ({items}) => {
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <div className='img-container'>
-            <img// className="d-block w-100"
+            <img
                 src={require('../resources/BLM.png')} alt='blm'
             />
           </div>
@@ -23,7 +23,7 @@ const MissionsCarousel = ({items}) => {
         </Carousel.Item>
         <Carousel.Item>
           <div className='img-container'>
-            <img// className="d-block w-100"
+            <img
                 src={require('../resources/BLM.png')} alt='blm'
             />
           </div>
@@ -33,7 +33,7 @@ const MissionsCarousel = ({items}) => {
         </Carousel.Item>
         <Carousel.Item>
           <div className='img-container'>
-            <img// className="d-block w-100"
+            <img
                 src={require('../resources/BLM.png')} alt='blm'
             />
           </div>
