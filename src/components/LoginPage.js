@@ -3,10 +3,27 @@ import MissionsCarousel from "./MissionsCarousel";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+const items = [
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
 const LoginPage = () => {
   return (
       <div className='login-page'>
-        <MissionsCarousel/>
+        <MissionsCarousel items={items}/>
         <div className='welcome-section'>
           <h2>Welcome to TurnUp</h2>
           <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
