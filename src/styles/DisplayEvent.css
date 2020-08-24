@@ -1,0 +1,45 @@
+#event {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  padding: 0;
+}
+
+#event img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+#imageTitle {
+  position: relative;
+}
+
+#name {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  border: 5px solid rgb(167, 166, 166);
+  margin: 0;
+}
+
+#info, #rsvp {
+  padding: 40px;
+}
+
+#details p svg {
+  margin-right: 5px;
+}
+
+#more {
+  float: right;
+  text-decoration: underline;
+}
