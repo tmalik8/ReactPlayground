@@ -90,10 +90,10 @@ const DisplayEvent = (props) => {
           </Col>
         </Row>
         <Row id="rsvp">
-        <Col xs={8}>
+        <Col xs={12} sm={8}>
           <p>[people icons] # People Going</p>
         </Col>
-        <Col xs={4}>
+        <Col xs={12} sm={4}>
           <Button id="button">Remove RSVP</Button>
         </Col>
         </Row>
