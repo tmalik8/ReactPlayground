@@ -21,6 +21,7 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
+import DisplayEvent from "./DisplayEvent";
 
 
 
@@ -93,17 +94,17 @@ let kyle = new Intern(
 );
 
 let luis = new Intern(
-  "Luis", 
-  "Senior at George Mason University", 
-  "Intern (FrontEnd Web)", 
+  "Luis",
+  "Senior at George Mason University",
+  "Intern (FrontEnd Web)",
   "https://i.pinimg.com/600x315/88/5b/7b/885b7b783181234c51ea17ec48a02506.jpg",
   new Date("8/30/20")
 );
- 
+
 
 const Playground = () => {
   const [show, setShow] = useState(false);
-  const[showJoke, setJoke]=useState(false); 
+  const[showJoke, setJoke]=useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
     <Container>
@@ -238,7 +239,7 @@ const Playground = () => {
                 onClick={() => {
                   setJoke(true);
                 }}>
-                <JokeModal 
+                <JokeModal
                 value={showJoke}
                 hide={()=>setJoke(false)}/>
                 <div>Programming Joke: What is a ghost's favorite type?</div>
@@ -256,6 +257,8 @@ const Playground = () => {
       <Jumbotron hidden>
         <InputField/>
       </Jumbotron>
+
+      <DisplayEvent/>
     </Container>
   )
 };
