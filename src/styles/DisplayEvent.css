@@ -35,6 +35,14 @@ hr {
   padding: 40px;
 }
 
+#details p, #more {
+  color: rgb(81, 42, 133);
+}
+
+#details p.tag {
+  color: rgb(122, 43, 226);
+}
+
 #details p svg {
   margin-right: 5px;
 }
@@ -42,4 +50,11 @@ hr {
 #more {
   float: right;
   text-decoration: underline;
+}
+
+#button {
+  background-color: rgb(81, 42, 133);
+  border: none;
+  border-radius: 0;
+  padding: 10px 30px;
 }

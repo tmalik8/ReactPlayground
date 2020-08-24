@@ -21,7 +21,7 @@ const DisplayEvent = (props) => {
   // format list of tags
   const renderedTags = [];
   for (const tag of event.tags) {
-    renderedTags.push(<p><BsFillTagFill/>{tag}</p>);
+    renderedTags.push(<p className="tag"><BsFillTagFill/>{tag}</p>);
   }
 
   /**
@@ -94,7 +94,7 @@ const DisplayEvent = (props) => {
           <p>[people icons] # People Going</p>
         </Col>
         <Col xs={4}>
-          <Button>Remove RSVP</Button>
+          <Button id="button">Remove RSVP</Button>
         </Col>
         </Row>
       </Container>
