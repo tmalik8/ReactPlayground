@@ -5,6 +5,8 @@
 import React from 'react';
 import ImgButton from '../ImgButton';
 import {Jumbotron} from "react-bootstrap";
+import Counter from '../Counter';
+
 
 function soniaPage() {
   return (
@@ -14,6 +16,7 @@ function soniaPage() {
           <p>Hi! My name is Sonia. I created this component for Task 1...</p>
           <p>Click the button to generate a random dog image:</p>
           <ImgButton></ImgButton>
+          <Counter></Counter>
       </Jumbotron>
   );
 }
