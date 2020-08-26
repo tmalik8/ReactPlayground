@@ -22,17 +22,16 @@ import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
 import PeopleComponent from "./PeopleComponent";
-
+import Counter from './Counter';
 
 
 /* Models/Services */
-
 import {Intern} from "../model/Intern";
+
 
 // import JokeModal from "./JokeModal";
 
 import profilePic from '../resources/profilePicture.jpeg'
-
 
 let amonte = new Intern(
   "Amonte",
@@ -96,12 +95,13 @@ let kyle = new Intern(
 );
 
 let luis = new Intern(
-  "Luis", 
-  "Senior at George Mason University", 
-  "Intern (FrontEnd Web)", 
+  "Luis",
+  "Senior at George Mason University",
+  "Intern (FrontEnd Web)",
   "https://i.pinimg.com/600x315/88/5b/7b/885b7b783181234c51ea17ec48a02506.jpg",
   new Date("8/30/20")
 );
+
 
 let kyleProfile = {
   firstName: "Kyle",
@@ -121,10 +121,13 @@ let amonteProfile = {
   profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
 };
 
-const Playground = () => {
+
+
+const Playground = (props) => {
   const [show, setShow] = useState(false);
-  const[showJoke, setJoke]=useState(false); 
+  const[showJoke, setJoke]=useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
+
   return (
     <Container>
       <NavBar NavTitles={NavTitle}/>
@@ -135,6 +138,7 @@ const Playground = () => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Counter></Counter>
         <Container>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
@@ -260,7 +264,7 @@ const Playground = () => {
                 onClick={() => {
                   setJoke(true);
                 }}>
-                <JokeModal 
+                <JokeModal
                 value={showJoke}
                 hide={()=>setJoke(false)}/>
                 <div>Programming Joke: What is a ghost's favorite type?</div>
