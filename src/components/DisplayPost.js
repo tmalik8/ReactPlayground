@@ -28,15 +28,19 @@ const DisplayPost = (props) => {
 
   /**
    * Returns hours and minutes since post was posted
-   * @param {Date} timeSince
+   * @param {Date} time - Date of post
    */
-  function calculateTimeSince(timeSince) {
+  function calculateTimeSince(time) {
     let minutesSince = Math.floor(((new Date()) - timeSince) / (1000 * 60))
     let hours = Math.floor(minutesSince / 60);
     let minutes = Math.floor(minutesSince % 60);
      return hours + " hr " + minutes + " min";
   }
 
+  /**
+   * Changes clicked action to purple
+   * @param {event} e - event triggered
+   */
   function onActionClick(e) {
     e.target.classList.add("active");
   }
