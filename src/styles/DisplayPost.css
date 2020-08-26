@@ -1,0 +1,67 @@
+#post {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+#post svg {
+  font-size: 30px;
+}
+
+#dots {
+  float: right;
+  color: indigo;
+}
+
+#post img {
+  width: 100%;
+}
+
+#post img, #post iframe {
+  margin: 5px 0;
+}
+
+#time p {
+  color: gray;
+  text-align: right;
+}
+
+#stats {
+  margin-top: 20px;
+}
+
+#stats span {
+  border-radius: 50%;
+  background-color: indigo;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+#stats svg {
+  color: white;
+  font-size: 100%;
+}
+
+#stats p {
+  display: inline;
+  margin-right: 10px;
+}
+
+.action {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+
+.action:focus {
+  outline: 0;
+}
+
+.action svg {
+  color: gray;
+}
+
+.active {
+  color: indigo;
+}
