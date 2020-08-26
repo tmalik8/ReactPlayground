@@ -21,7 +21,6 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
-import DisplayPost from "./DisplayPost";
 import PeopleComponent from "./PeopleComponent";
 import Counter from './Counter';
 
