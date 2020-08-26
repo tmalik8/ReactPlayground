@@ -32,7 +32,7 @@ const DisplayEvent = (props) => {
     if (desc.length > 500) {
         return (
           <p>{desc.substring(0, 500) + "..."}
-          <a href="/" id="more">More</a></p>
+          <a href="/" className="more">More</a></p>
         );
     }
     else {
@@ -41,17 +41,17 @@ const DisplayEvent = (props) => {
 }
 
   return (
-      <Container id="event">
+      <Container className="event">
         <Row>
           <Col>
-            <div id="imageTitle">
+            <div className="imageTitle">
               <img src={event.img} alt={event.name}/>
-              <p id="name">{event.name}</p>
+              <p className="name">{event.name}</p>
             </div>
           </Col>
         </Row>
         <hr/>
-        <Row id="info">
+        <Row className="info">
           <Col xs={12} md={8}>
             <Row xs={1}>
               <Col>
@@ -63,7 +63,7 @@ const DisplayEvent = (props) => {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={4} id="details">
+          <Col xs={12} md={4} className="details">
             <Row xs={1}>
               <Col>
                 {renderedTags}
@@ -89,13 +89,13 @@ const DisplayEvent = (props) => {
             </Row>
           </Col>
         </Row>
-        <Row id="rsvp">
-        <Col xs={12} sm={8}>
-          <p>[people icons] # People Going</p>
-        </Col>
-        <Col xs={12} sm={4}>
-          <Button id="button">Remove RSVP</Button>
-        </Col>
+        <Row className="rsvp">
+          <Col xs={12} sm={8}>
+            <p>[people icons] # People Going</p>
+          </Col>
+          <Col xs={12} sm={4}>
+            <Button className="button">Remove RSVP</Button>
+          </Col>
         </Row>
       </Container>
   );
