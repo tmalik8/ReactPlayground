@@ -31,7 +31,7 @@ const DisplayPost = (props) => {
    * @param {Date} time - Date of post
    */
   function calculateTimeSince(time) {
-    let minutesSince = Math.floor(((new Date()) - timeSince) / (1000 * 60))
+    let minutesSince = Math.floor(((new Date()) - time) / (1000 * 60))
     let hours = Math.floor(minutesSince / 60);
     let minutes = Math.floor(minutesSince % 60);
      return hours + " hr " + minutes + " min";
