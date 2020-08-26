@@ -46,25 +46,25 @@ const DisplayPost = (props) => {
   }
 
   return (
-      <Container id="post">
+      <Container className="post">
         <Row>
           <Col xs={10}>
             {/* <PeopleComponent/> */}
             <p>[People Component]</p>
           </Col>
           <Col xs={2}>
-            <HiDotsHorizontal id="dots"/>
+            <HiDotsHorizontal className="dots"/>
           </Col>
         </Row>
         <hr/>
-        <Row id="time">
+        <Row className="time">
           <Col>
             <p>{calculateTimeSince(post.time)}</p>
           </Col>
         </Row>
-        <Row>
+        <Row className="content">
           <Col>
-            <p id="content">{post.content}</p>
+            <p>{post.content}</p>
           </Col>
         </Row>
         <Row xs={1} md={2} lg={3}>
@@ -73,7 +73,7 @@ const DisplayPost = (props) => {
         <Row xs={1} lg={2}>
           {renderedVids}
         </Row>
-        <Row id="stats">
+        <Row className="stats">
           <Col>
             <p><span><HiThumbUp/></span>{post.stats[0]}</p>
             <p><span><HiAnnotation/></span>{post.stats[1]}</p>

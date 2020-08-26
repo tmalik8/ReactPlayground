@@ -1,55 +1,55 @@
-#post {
+.post {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 2%;
 }
 
-#post svg {
+.post svg {
   font-size: 30px;
 }
 
-#dots {
+.post .dots {
   float: right;
   color: indigo;
 }
 
-#post img {
-  width: 100%;
-}
-
-#post img, #post iframe {
-  margin: 5px 0;
-}
-
-#time p {
+.post .time p {
   color: darkgray;
   text-align: right;
 }
 
-#content {
+.post .content p {
   color: gray;
 }
 
-#stats {
-  margin-top: 20px;
+.post img {
+  width: 100%;
 }
 
-#stats span {
+.post img, .post iframe {
+  margin: 1% 0;
+}
+
+.post .stats {
+  margin-top: 2%;
+}
+
+.post .stats span {
   border-radius: 50%;
   background-color: indigo;
   padding: 5px;
-  margin-right: 5px;
+  margin-right: 1%;
 }
 
-#stats svg {
+.post .stats svg {
   color: white;
   font-size: 100%;
 }
 
-#stats p {
+.post .stats p {
   display: inline;
-  margin-right: 10px;
+  margin-right: 2%;
 }
 
 .action {
