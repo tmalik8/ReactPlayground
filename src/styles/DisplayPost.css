@@ -23,8 +23,12 @@
 }
 
 #time p {
-  color: gray;
+  color: darkgray;
   text-align: right;
+}
+
+#content {
+  color: gray;
 }
 
 #stats {
