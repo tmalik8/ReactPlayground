@@ -1,4 +1,4 @@
-.profilePicture {
+.profile-picture {
     float: left;
     width: 47px;
     height: 47px;
@@ -8,26 +8,17 @@
     flex: 1;
 }
 
-.profileName {
+.profile-name {
     padding-top: 8px;
     font-size: 15px;
     font-weight: bold;
     line-height: 90%;
 }
 
-.profileLocation {
+.profile-location {
     font-size: 11px;
     padding-bottom: 10px;
 }
 .profile {
     padding-bottom: 2px;
-}
-.followButton {
-    background-color: indigo;
-    color: white;
-    text-align: center;
-    padding: 2px 20px;
-    font-size: 12px;
-    border: none;
-    text-decoration: none;
 }

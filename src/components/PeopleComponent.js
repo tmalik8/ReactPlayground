@@ -14,9 +14,9 @@ const PeopleComponent = (props) => {
 
     return (
         <Form className="profile">
-            <Image className="profilePicture" src={profilePic}/>
-            <h1 className="profileName">{person.firstName} {person.lastName}</h1>
-            <h2 className="profileLocation">{person.city}, {person.state}, {person.country}</h2>
+            <Image className="profile-picture" src={profilePic}/>
+            <h1 className="profile-name">{person.firstName} {person.lastName}</h1>
+            <h2 className="profile-location">{person.city}, {person.state}, {person.country}</h2>
         </Form>
     );
 };
