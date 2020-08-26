@@ -289,7 +289,6 @@ const ConfirmModal = ({header, content}) => {
         <InputField/>
       </Jumbotron>
 
-      <DisplayPost/>
     </Container>
   )
 };
