@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, ResponsiveEmbed, Button } from 'react-bootstrap';
+import { Container, Row, Col, ResponsiveEmbed } from 'react-bootstrap';
 // import PeopleComponent from "./PeopleComponent";
 import {HiDotsHorizontal, HiThumbUp, HiAnnotation, HiFlag, HiReply} from "react-icons/hi";
 import Iframe from 'react-iframe';
@@ -60,7 +60,7 @@ const DisplayPost = (props) => {
         </Row>
         <Row>
           <Col>
-            <p>{post.content}</p>
+            <p id="content">{post.content}</p>
           </Col>
         </Row>
         <Row xs={1} md={2} lg={3}>
