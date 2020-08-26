@@ -21,14 +21,16 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
-
+import PeopleComponent from "./PeopleComponent";
+import Counter from './Counter';
 
 /* Models/Services */
-
 import {Intern} from "../model/Intern";
+
 
 // import JokeModal from "./JokeModal";
 
+import profilePic from '../resources/profilePicture.jpeg'
 
 let amonte = new Intern(
   "Amonte",
@@ -99,11 +101,31 @@ let luis = new Intern(
   new Date("8/30/20")
 );
 
+let kyleProfile = {
+  firstName: "Kyle",
+  lastName: "Kobayashi",
+  city: "Miami",
+  state: "FL",
+  country: "US",
+  profileImage:profilePic
+};
 
-const Playground = () => {
+let amonteProfile = {
+  firstName: "Amonte",
+  lastName: "Andrews",
+  city: "St Petersburg",
+  state: "FL",
+  country: "US",
+  profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
+};
+
+
+
+const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
+
   return (
     <Container>
       <NavBar NavTitles={NavTitle}/>
@@ -114,6 +136,7 @@ const Playground = () => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Counter></Counter>
         <Container>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
@@ -201,6 +224,8 @@ const Playground = () => {
                   {name: 'Swift', key: '4'},
                   {name: 'C', key: '5'},
                 ]}/>
+                <PeopleComponent profile={kyleProfile} />
+                <PeopleComponent profile={amonteProfile} />
               </InternInfoDisplay>
             </Col>
             <Col className="my-3">
