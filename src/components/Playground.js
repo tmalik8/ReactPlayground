@@ -21,8 +21,6 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
-import DisplayEvent from "./DisplayEvent";
-
 
 
 /* Models/Services */
@@ -258,7 +256,6 @@ const Playground = () => {
         <InputField/>
       </Jumbotron>
 
-      <DisplayEvent/>
     </Container>
   )
 };
