@@ -21,10 +21,17 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
+import PeopleComponent from "./PeopleComponent";
 import Counter from './Counter';
+
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
+
+
+// import JokeModal from "./JokeModal";
+
+import profilePic from '../resources/profilePicture.jpeg'
 
 let amonte = new Intern(
   "Amonte",
@@ -94,6 +101,26 @@ let luis = new Intern(
   "https://i.pinimg.com/600x315/88/5b/7b/885b7b783181234c51ea17ec48a02506.jpg",
   new Date("8/30/20")
 );
+
+
+let kyleProfile = {
+  firstName: "Kyle",
+  lastName: "Kobayashi",
+  city: "Miami",
+  state: "FL",
+  country: "US",
+  profileImage:profilePic
+};
+
+let amonteProfile = {
+  firstName: "Amonte",
+  lastName: "Andrews",
+  city: "St Petersburg",
+  state: "FL",
+  country: "US",
+  profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
+};
+
 
 
 const Playground = (props) => {
@@ -199,6 +226,8 @@ const Playground = (props) => {
                   {name: 'Swift', key: '4'},
                   {name: 'C', key: '5'},
                 ]}/>
+                <PeopleComponent profile={kyleProfile} />
+                <PeopleComponent profile={amonteProfile} />
               </InternInfoDisplay>
             </Col>
             <Col className="my-3">
