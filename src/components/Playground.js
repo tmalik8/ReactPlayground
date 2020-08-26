@@ -257,7 +257,6 @@ const Playground = () => {
         <InputField/>
       </Jumbotron>
 
-      <DisplayPost/>
     </Container>
   )
 };
