@@ -11,18 +11,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom Components*/
 
-import IncrementButton from "./IncrementButton";
-import InputField from "./InputField";
-import ToastWrapper from "./ToastWrapper";
-import InternInfoDisplay from "./InternInfoDisplay";
-import LightModal from "./lightModal";
-import FadeText from "./FadeText";
-import NavBar from "./navBar"
-import PopOverTrigger from "./PopOverButton";
-import LanguageList from './LanguageList';
-import JokeModal from "./JokeModal";
+import IncrementButton from "./practice/IncrementButton";
+import InputField from "./practice/InputField";
+import ToastWrapper from "./practice/ToastWrapper";
+import InternInfoDisplay from "./practice/InternInfoDisplay";
+import LightModal from "./practice/lightModal";
+import FadeText from "./practice/FadeText";
+import NavBar from "./practice/navBar"
+import PopOverTrigger from "./practice/PopOverButton";
+import LanguageList from './practice/LanguageList';
+import JokeModal from "./practice/JokeModal";
+import Counter from './practice/Counter';
+
+/** Components Continued */
+
 import PeopleComponent from "./PeopleComponent";
-import Counter from './Counter';
+import CreatePost from "./CreatePost"
+
 
 
 /* Models/Services */
@@ -140,6 +145,7 @@ const Playground = (props) => {
         </ToastWrapper>
         <Counter></Counter>
         <Container>
+        <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
               <InternInfoDisplay
