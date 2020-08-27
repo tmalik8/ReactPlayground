@@ -6,7 +6,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import "../styles/PhoneConfirm.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -23,7 +23,7 @@ import NavBar from "./practice/navBar"
 import PopOverTrigger from "./practice/PopOverButton";
 import LanguageList from './practice/LanguageList';
 import JokeModal from "./practice/JokeModal";
-
+import PhoneConfirm from "./PhoneConfirm";
 import Alert from "./practice/Alert";
 import Counter from './practice/Counter';
 
@@ -159,7 +159,15 @@ const Playground = (props) => {
         </span>
         </ToastWrapper>
 
-     
+        <Row>
+     <Col>
+     <img src="https://i.redd.it/kp2z4gkxkiz41.jpg" align="left" alt=""/>;
+      </Col>
+      <Col>
+      <PhoneConfirm/>
+      </Col>
+      </Row>
+
         <Counter></Counter>
 
         <Container>
