@@ -1,6 +1,6 @@
 /**
  * @file CreatePost Component
- * @author Sonia Saitawdekar 
+ * @author Shayan A.
  */
 
 
