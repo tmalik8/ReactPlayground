@@ -31,3 +31,122 @@
         word-break: break-all;
     }
 }
+.button-acc-creation{
+    top: 1679px;
+left: 789px;
+width: 113px;
+height: 54px;
+background: #989898 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+}
+
+.button-signup{
+    top: 772px;
+left: 1149px;
+width: 398px;
+height: 54px;
+background: #989898 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+}
+
+.input-signup{
+    top: 663px;
+left: 1149px;
+width: 398px;
+height: 42px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #767676;
+border-radius: 10px;
+opacity: 1;
+}
+
+.Jumb-signup{
+    top: 200px;
+left: 501px;
+width: 565px;
+height: 392px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 90px;
+opacity: 1;
+padding: 80px 80px 80px 80px;
+}
+
+.button-modal{
+    top: 397px;
+left: 192px;
+width: 256px;
+height: 60px;
+background: #402366 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.body-modal-div{
+    top: 205px;
+left: 129px;
+width: 382px;
+height: 57px;
+text-align: center;
+letter-spacing: 0px;
+color: #5B5B5B;
+opacity: 1;
+}
+
+.body-modal-p{
+    top: 277px;
+left: 133px;
+width: 373px;
+height: 77px;
+text-align: center;
+letter-spacing: 0px;
+color: #303133;
+opacity: 1;
+}
+
+.title-h1-signup{
+    top: 284px;
+left: 1149px;
+width: 494px;
+height: 84px;
+text-align: left;
+font: normal normal normal 60px/90px Poppins;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+
+.text-p-signup{
+    top: 402px;
+left: 1149px;
+width: 471px;
+height: 128px;
+text-align: left;
+font: normal normal normal 18px/24px Poppins;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+
+.button-login-signup{
+    top: 38px;
+left: 1672px;
+width: 179px;
+height: 60px;
+border: 2px solid #000000;
+justify-content: flex-end;
+border-radius: 10px;
+opacity: 1;
+
+}
+
+.input-acc-creation{
+
+width: 142px;
+height: 16px;
+text-align: left;
+font: normal normal bold 13px/17px Arial;
+letter-spacing: 0px;
+color: #727272;
+opacity: 1;
+}
