@@ -4,7 +4,7 @@
 import React from "react";
 import { Tab ,Tabs } from 'react-bootstrap';
 import {Jumbotron} from "react-bootstrap";
-import InternInfoDisplay from "../InternInfoDisplay";
+import InternInfoDisplay from "../practice/InternInfoDisplay";
 
 
 /* Models/Services */
