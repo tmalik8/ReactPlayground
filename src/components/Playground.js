@@ -6,6 +6,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -27,6 +28,7 @@ import Counter from './practice/Counter';
 
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
+import ConfirmationBox from "./ConfirmationBox";
 
 
 
@@ -131,6 +133,7 @@ let amonteProfile = {
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
 
   return (
@@ -143,6 +146,13 @@ const Playground = (props) => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Row className='justify-content-center'>
+                <Button onClick={() => setModalShow(true)} >Confirmation Box</Button>
+        </Row>
+        <ConfirmationBox
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+        />
         <Counter></Counter>
         <Container>
         <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
