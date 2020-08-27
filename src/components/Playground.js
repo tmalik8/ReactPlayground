@@ -7,9 +7,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom Components*/
+
 
 import IncrementButton from "./practice/IncrementButton";
 import InputField from "./practice/InputField";
@@ -21,7 +23,10 @@ import NavBar from "./practice/navBar"
 import PopOverTrigger from "./practice/PopOverButton";
 import LanguageList from './practice/LanguageList';
 import JokeModal from "./practice/JokeModal";
+
+import Alert from "./practice/Alert";
 import Counter from './practice/Counter';
+
 
 /** Components Continued */
 
@@ -107,6 +112,16 @@ let luis = new Intern(
   new Date("8/30/20")
 );
 
+let tanya = new Intern(
+  "Tanya",
+"Rising Sophomore at George Mason University",
+"Intern (Full Stack Web Developer)",
+"https://i2.wp.com/www.sugarspunrun.com/wp-content/uploads/2019/01/Best-Cheesecake-Recipe-2-1-of-1-4.jpg",
+new Date("8/21/20")
+);
+ 
+
+
 
 let kyleProfile = {
   firstName: "Kyle",
@@ -143,7 +158,10 @@ const Playground = (props) => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+
+     
         <Counter></Counter>
+
         <Container>
         <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
@@ -263,7 +281,7 @@ const Playground = (props) => {
               {/* <br></br>
               <div><FadeText></FadeText></div> */}
             </Col>
-
+            
             <Col className="my-3">
               <InternInfoDisplay
                 intern={luis}
@@ -278,16 +296,36 @@ const Playground = (props) => {
             </Col>
 
           </Row>
-        </Container>
-      </Jumbotron>
+          <Row>
+            <Col>
+            <InternInfoDisplay 
+            intern={tanya}
+            onClick={() => {
+              let content = "This was also logged to the console";
+              console.log(content);
+              alert(content);
+            }}
+          >
+            </InternInfoDisplay>
+            </Col>
+            <Col>
+            </Col>
+            <Col>
+            </Col>
+          </Row>
+          <Alert />
+     
 
       <Jumbotron hidden>
         <IncrementButton/>
       </Jumbotron>
 
+      
       <Jumbotron hidden>
         <InputField/>
       </Jumbotron>
+    </Container>
+    </Jumbotron>
     </Container>
   )
 };
