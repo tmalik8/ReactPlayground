@@ -22,8 +22,8 @@ import FadeText from "./practice/FadeText";
 import NavBar from "./practice/navBar"
 import PopOverTrigger from "./practice/PopOverButton";
 import LanguageList from './practice/LanguageList';
-import JokeModal from "./practice/JokeModal";
 import PhoneConfirm from "./PhoneConfirm";
+import JokeModal from "./practice/JokeModal";
 import Alert from "./practice/Alert";
 import Counter from './practice/Counter';
 
