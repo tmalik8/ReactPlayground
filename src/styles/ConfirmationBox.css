@@ -1,40 +1,24 @@
 
-.body-modal-h1{
-
-width: 382px;
-height: 77px;
-text-align: center;
-font-weight: bold;
-size: 95px;
-text-align:center;
-letter-spacing: 0px;
-color: #5B5B5B;
-opacity: 1;
+.confirm-box * {
+    text-align: center;
+    width:90%;
+    margin: 2% auto 0 auto;
+    opacity: 1;
 }
 
-.body-modal-p{
-
-width: 373px;
-height: 77px;
-text-align: center;
-letter-spacing: 0px;
-color: #303133;
-opacity: 1;
+.confirm-box p {
+    color: #5B5B5B;
 }
 
-.body-modal-icon{
-    
-width: 482px;
-height: 77px;
-color: #44A45F;
-text-align: center;
+
+.body-modal-icon {
+    color: #44A45F;
 }
 
 .button-modal{
 
-width: 246px;
-height: 77px;
-background: #402366 0% 0% no-repeat padding-box;
-opacity: 1;
+
+background: #402366;
+
 
 }
