@@ -16,14 +16,15 @@ import Col from 'react-bootstrap/Col'
 
 
 import '../styles/CreatePost.css'
+import PeopleComponent from './PeopleComponent'
 
 
-const CreatePost = ({name, location, img, callback}) => {
+const CreatePost = ({callback, profile}) => {
 
   //state
   const [eventsToggled, toggleEventPost] = useState(true);
   const [data, setData] = useState({});
-  
+
   const _callback = callback;
 
   /**
@@ -37,7 +38,7 @@ const CreatePost = ({name, location, img, callback}) => {
 
   /**
    * Placeholder function.
-   * @param {string} text 
+   * @param {string} text
    */
   function updateAboutField(text) {
     data.descrption = text;
@@ -47,26 +48,17 @@ const CreatePost = ({name, location, img, callback}) => {
   return (
       <Container className='create-post-wrapper'>
           <Container>
-           <Row>
-           <Col>
-           <div className='info'>
-              <div className='img-container'>
-              {/** Will replace with People Component*/}
-                <img src={img} alt='me'/>
-              </div>
-              <div>
-                <div className='name'>{name}</div>
-                <div className='loc'>{location}</div>
-              </div>
-            </div>
+            <Row>
+            <Col>
+              <PeopleComponent profile={profile}/>
             </Col>
             <Col lg={6} xs={6}>
               <Button className="create-events-btn float-right" onClick={() => toggleEventPost(!eventsToggled)}>+ Create {eventsToggled ? "Event" : "Post" } </Button>
             </Col>
            </Row>
-            
-            
-           
+
+
+
           </Container>
       <Form.Group>
         <Form.Control as="textarea" placeholder="What's on your mind?" rows="3" onChange={(event)=> updateAboutField(event.target.value)} />
@@ -78,9 +70,9 @@ const CreatePost = ({name, location, img, callback}) => {
             <i>document</i></Col>
           <Col xs={6}> <Button className="create-post-btn float-right col-3" onClick={()=> submitData() } >Ok</Button> </Col>
         </Row>
-        
+
       </Form.Group>
-      
+
       </Container>
   );
 };

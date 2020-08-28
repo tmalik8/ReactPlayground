@@ -145,7 +145,7 @@ const Playground = (props) => {
         </ToastWrapper>
         <Counter></Counter>
         <Container>
-        <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
+        <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
               <InternInfoDisplay
