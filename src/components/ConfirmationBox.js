@@ -3,7 +3,7 @@ import { Row, Container} from "react-bootstrap";
 
 import '../styles/ConfirmationBox.css'
 
-function ConfirmationBox(header, content) {
+function ConfirmationBox({header, content}) {
 
     const _header = header ?? "Success!";
     const _content = content ?? "";
