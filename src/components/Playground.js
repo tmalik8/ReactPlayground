@@ -6,6 +6,8 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button"
+import {Modal} from "react-bootstrap"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -27,6 +29,7 @@ import Counter from './practice/Counter';
 
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
+import ConfirmationBox from "./ConfirmationBox";
 
 
 
@@ -127,10 +130,48 @@ let amonteProfile = {
 };
 
 
+const ConfirmModal = ({header, content}) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const _header = header;
+  const _content = content;
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Test Confirm Modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          
+        </Modal.Header>
+        <Modal.Body>
+        <ConfirmationBox header={_header} content={_content}  />
+        <Button  className="d-flex justify-content-center" style={{backgroundColor:"#402366", color:"white",width:"80%",margin:"0 auto 0 auto"}}  onClick={handleClose}>
+            Okay
+          </Button>
+        
+        
+        </Modal.Body>
+        {/* <Modal.Footer>
+          
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
+    </>
+  );
+
+}
+
 
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
+  
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
 
   return (
@@ -143,6 +184,10 @@ const Playground = (props) => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Row className='justify-content-center'>
+                <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
+        </Row>
+       
         <Counter></Counter>
         <Container>
         <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
