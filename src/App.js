@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 /**stylesheets */
 import "bootstrap/dist/css/bootstrap.min.css";
 import './styles/app.css';
+import './styles/TurnUp.css'
 
 /**React Components */
 import Container from "react-bootstrap/Container";
