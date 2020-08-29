@@ -63,7 +63,7 @@ const DisplayPost = ({post, profile}) => {
             <p>{post.content}</p>
           </Col>
         </Row>
-        <Row xs={1} md={2} lg={3} className="media">
+        <Row className="media">
           {renderedMedia}
         </Row>
         <Row className="stats">

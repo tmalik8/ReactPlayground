@@ -111,7 +111,6 @@ let luis = new Intern(
   new Date("8/30/20")
 );
 
-
 let kyleProfile = {
   firstName: "Kyle",
   lastName: "Kobayashi",
@@ -134,7 +133,7 @@ let postData = {
   content: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
   time: new Date("August 25, 2020 03:24:00"),
   imgs: ["https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg", "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg","https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg"],
-  // video: "https://www.youtube.com/embed/ttIWUvxnuEo",
+  //video: "https://www.youtube.com/embed/ttIWUvxnuEo",
   stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
 }
 
