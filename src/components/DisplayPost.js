@@ -1,3 +1,8 @@
+/**
+ * @file DisplayPost
+ * @author - Sonia Saitawdekar
+ */
+
 import React, {useState} from 'react';
 import { Container, Row, Col, ResponsiveEmbed, Button } from 'react-bootstrap';
 import PeopleComponent from "./PeopleComponent";
