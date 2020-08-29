@@ -8,12 +8,14 @@ import '../styles/DisplayPost.css';
 
 const DisplayPost = ({post, profile}) => {
 
+  
   // Format the images if given, otherwise format the video if given
   const renderedMedia = [];
   if (post.imgs) {
-    for (const img of post.imgs) {
-      renderedMedia.push(<Col xs={4}><img src={img} alt="post media"/></Col>);
-    }
+    post.imgs.map((img, i) =>{
+      return <Col key={i} xs={4}><img src={img} alt="post media"/></Col>;
+    }).forEach(imgCol => {renderedMedia.push(imgCol)});
+    
   } else if (post.video) {
     renderedMedia.push(<Col xs={12}><ResponsiveEmbed aspectRatio="16by9"><Iframe src={post.video} title="post media" allowFullScreen/></ResponsiveEmbed></Col>);
   }
