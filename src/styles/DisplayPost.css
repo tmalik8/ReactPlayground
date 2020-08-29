@@ -9,6 +9,11 @@
   font-size: 30px;
 }
 
+
+.action-row svg
+{
+  color: gray;
+}
 .post .dots {
   float: right;
   color: indigo;
@@ -60,10 +65,6 @@
 
 .action:focus {
   outline: 0;
-}
-
-.action svg {
-  color: gray;
 }
 
 .active {

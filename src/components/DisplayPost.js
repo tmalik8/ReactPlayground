@@ -1,10 +1,55 @@
-import React from 'react';
-import { Container, Row, Col, ResponsiveEmbed } from 'react-bootstrap';
+import React, {useState} from 'react';
+import { Container, Row, Col, ResponsiveEmbed, Button } from 'react-bootstrap';
 import PeopleComponent from "./PeopleComponent";
 import {HiDotsHorizontal, HiThumbUp, HiAnnotation, HiFlag, HiReply} from "react-icons/hi";
 import Iframe from 'react-iframe';
 import '../styles/DisplayPost.css';
 
+
+const ActionRow = ({post,user}) => {
+  
+  //state
+  const [liked,toggleLike] = useState(false)
+  const [activeAction, setActiveAction] = useState("none")
+  
+  const likePost = () => 
+  {
+    
+    console.log(`On->PostLikeToggle`,{post:post,user:user});
+    toggleLike(!liked);
+  }
+
+  const onActiveActionChange = (action) => {
+    console.log(`On->ActiveActionChange`, action);
+    setActiveAction(action);
+  }
+
+ return ( <Row className="action-row">
+          <Col>
+          {/** Will probably create a component */}
+          {/*<IconButton> */}
+          <Button variant="Light" 
+            onClick={() => {likePost();}} >
+              <HiThumbUp className={liked ? "active" : ""} /></Button>
+              {/** </IconButton> */}
+          </Col>
+          <Col>
+          <Button  variant="Light"
+            onClick={() => { onActiveActionChange("comment") }}>
+              <HiAnnotation className={activeAction === "comment" ? "active" : ""} /></Button>
+          </Col>
+          <Col>
+          <Button  variant="Light"
+            onClick={() => { onActiveActionChange("flag") }}>
+              <HiFlag className={activeAction === "flag" ? "active" : ""} /></Button>
+          </Col>
+          <Col>
+          <Button  variant="Light"
+            onClick={() => { onActiveActionChange("share") }}>
+              <HiReply className={activeAction === "share" ? "active" : ""} /></Button>
+          </Col>
+        </Row>)
+}
 
 const DisplayPost = ({post, profile}) => {
 
@@ -31,18 +76,7 @@ const DisplayPost = ({post, profile}) => {
      return hours + " hr " + minutes + " min";
   }
 
-  /**
-   * Changes clicked action to indigo and all others to gray
-   * @param {event} e - event triggered
-   */
-  function onActionClick(e) {
-    let actions = document.querySelectorAll(".post .action svg");
-    for (let i = 0; i < actions.length; i++) {
-      actions[i].classList.remove("active");
-      console.log("removing " + actions[i]);
-    }
-    e.currentTarget.firstElementChild.classList.add("active");
-  }
+ 
 
   return (
       <Container className="post">
@@ -77,20 +111,7 @@ const DisplayPost = ({post, profile}) => {
           </Col>
         </Row>
         <hr/>
-        <Row>
-          <Col>
-            <button className="action" onClick={onActionClick}><HiThumbUp/></button>
-          </Col>
-          <Col>
-            <button className="action" onClick={onActionClick}><HiAnnotation/></button>
-          </Col>
-          <Col>
-            <button className="action" onClick={onActionClick}><HiFlag/></button>
-          </Col>
-          <Col>
-            <button className="action" onClick={onActionClick}><HiReply/></button>
-          </Col>
-        </Row>
+        <ActionRow post={post.id} user={profile.id}></ActionRow>
       </Container>
   );
 };
