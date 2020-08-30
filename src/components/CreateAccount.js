@@ -1,3 +1,7 @@
+/**
+ * @file CreateAccount Component.
+ * @author - Adil Merribi
+ */
 import React, { useState } from "react";
 import { Button, FormControl, Col, Image, InputGroup, Container, Form, Row} from "react-bootstrap";
 
