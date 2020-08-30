@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button, FormControl, Col, Row, Navbar, Image, InputGroup, Container } from "react-bootstrap";
+import { Button, FormControl, Col, Image, InputGroup, Container, Form, Row} from "react-bootstrap";
 
-import logo from '../resources/turnUpLogo.png'
 import userAdd from '../resources/userAdd.png'
+
 function CreateAccount() {
   const [image, setImage] = useState({ preview: "", raw: "" });
   const [name, setName] = useState("");
@@ -15,6 +15,7 @@ function CreateAccount() {
   const [Snapchat, setSnapchat] = useState("");
   const [LinkedIn, setLinkedIn] = useState("");
 
+  const imgSource = image.preview ? image.preview : userAdd; 
   function validateForm() {
     return name.length > 0 && username.length > 0 && bio.length > 0 && bio.length <= 150;
   }
@@ -29,171 +30,127 @@ function CreateAccount() {
     });
   }
   const handleChange = e => {
+    console.log(`On->ProfileImageSelection`);
     if (e.target.files.length) {
+
       setImage({
         preview: URL.createObjectURL(e.target.files[0]),
         raw: e.target.files[0]
       });
     }
   };
-
+  let self = {};  
+  
   return (
-    <Container onSubmit={handleSubmit}>
+<Form onSubmit={handleSubmit} > 
+        <Form.Group as={Container}  >
+          <Row className="justify-content-md-center">
+            <Col xs={6} md={4} >
+              {/** Image uploading will be replaced by a library */}
+              <Image  width="206" height="206" roundedCircle style={{ border: "1px solid"}} 
+              src={imgSource} onClick={() => {console.log(`On->ImageUploadClick`,self); self.fileUpload.click(); }}
+              />
+              <Form.File id="profileImgUpload" onChange={handleChange} hidden ref={(me)=>{self.fileUpload=me}} />
+            </Col>      
+          </Row>
+        </Form.Group>
 
-      <Navbar bg="light" variant="light">
-        <Navbar.Brand href="#home"> <Image className="align-top" alt="TurnUp Activism" src={logo} width="150" height="60" /> </Navbar.Brand>
-        <Navbar.Collapse className="justify-content-end">
-          <Button variant="outline-dark" size="lg" className="button-login-signup" >LOG IN</Button>
-        </Navbar.Collapse>
-      </Navbar>
-      <br />
-      <Row className='justify-content-center'>
-        <label htmlFor="upload-button">
-          {image.preview ? (
-            <Image src={image.preview} alt="dummy" width="206" height="206" roundedCircle />
-          ) : (
-              <>
-                <Col xs={6} md={4}>
-                  <Image src={userAdd} width="206" height="206" roundedCircle />
-                </Col>
-              </>
-            )}
-        </label>
-        <input
-          type="file"
-          id="upload-button"
-          style={{ display: "none" }}
-          onChange={handleChange}
-        />
-      </Row>
-      <br />
-      <Row className='justify-content-center'>
-        <Col xs={4}>
-          <label className="input-acc-creation">Name*</label>
-          <InputGroup controlId="name">
-            <FormControl
-              autoFocus
-              placeholder="John Doe"
-              value={name}
-              size="lg"
-              type="text"
-              onChange={e => setName(e.target.value)}
-            />
-          </InputGroup>
-          <label className="input-acc-creation">Username*</label>
-          <InputGroup controlId="username" bsSize="large">
-            <FormControl
-              value={username}
-              onChange={e => setUsername(e.target.value)}
-              type="text"
-              placeholder="john_doe"
-              size="lg"
-            />
-          </InputGroup>
-        </Col>
-        <Col xs={4}>
-          <label className="input-acc-creation">Referral Code</label>
-          <InputGroup controlId="referralcode">
-            <FormControl
+      <Form.Row>
+          <Form.Group as={Col} controlId="name">
+          <Form.Label>Name*</Form.Label>
+          <FormControl   autoFocus placeholder="John Doe" size="lg" type="text"
+              value={name} onChange={e => setName(e.target.value)}  />
+          </Form.Group>
+          <Form.Group as={Col} controlId="referralcode">
+            <Form.Label>Referral Code</Form.Label>
+          <FormControl size="lg"
               value={referralcode}
-              onChange={e => setReferralcode(e.target.value)}
-              type="number"
-              size="lg"
-            />
-          </InputGroup>
-          <label className="input-acc-creation">Location</label>
-          <InputGroup controlId="location">
-            <FormControl
+              onChange={e => setReferralcode(e.target.value)} />
+          </Form.Group>
+      </Form.Row>
+      <Form.Row >
+            <Form.Group as={Col} conrolId="username">
+              <Form.Label>Username*</Form.Label>
+              <FormControl type="text" placeholder="john_doe" size="lg"
+              value={username}
+              onChange={e => setUsername(e.target.value)} />
+            </Form.Group>
+            <Form.Group as={Col} conrolId="location">
+              <Form.Label>Location</Form.Label>
+              <FormControl type="number" size="lg"
               value={location}
-              onChange={e => setLocation(e.target.value)}
-              type="number"
-              size="lg"
-            />
-          </InputGroup>
-        </Col>
-      </Row>
-      <br />
-      <Row className='justify-content-center'>
-        <Col xs={4}>
-          <label className="input-acc-creation">Bio* (max 150)</label>
-          <InputGroup controlId="bio">
-            <FormControl
+              onChange={e => setLocation(e.target.value)} />
+            </Form.Group>
+      </Form.Row>
+      
+      <Form.Row >
+            <Form.Group as={Col} controlId="bio">
+              <Form.Label>Bio* (max 150)</Form.Label>
+               <FormControl type="text" as="textarea" rows="8"
               value={bio}
-              as="textarea"
-              rows="8"
-              onChange={e => setBio(e.target.value)}
-              type="text"
-            />
-          </InputGroup>
-        </Col>
-        <Col xs={4}>
-          <label className="input-acc-creation">Social Media</label>
-          <InputGroup controlId="social">
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <i class="fab fa-instagram"></i>
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              value={Instagram}
-              onChange={e => setInstagram(e.target.value)}
-              type="text"
-              placeholder="Instagram"
-              size="lg"
-            />
-          </InputGroup>
-          <br />
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <i class="fab fa-facebook"></i>
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              value={Facebook}
-              onChange={e => setFacebook(e.target.value)}
-              type="text"
-              placeholder="Facebook"
-              size="lg"
-            />
-          </InputGroup>
-          <br />
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <i class="fab fa-snapchat"></i>
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              value={Snapchat}
-              onChange={e => setSnapchat(e.target.value)}
-              type="text"
-              placeholder="Snapchat"
-              size="lg"
-            />
-          </InputGroup>
-          <br />
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text>
-                <i class="fab fa-linkedin"></i>
-              </InputGroup.Text>
-            </InputGroup.Prepend>
-            <FormControl
-              value={LinkedIn}
-              onChange={e => setLinkedIn(e.target.value)}
-              type="text"
-              placeholder="LinkedIn"
-              size="lg"
-            />
-          </InputGroup>
-        </Col>
-      </Row>
-      <br />
-      <Row className='justify-content-center'>
-        <Button type="submit" disabled={!validateForm()} className="button-acc-creation">Continue</Button>
-      </Row>
-    </Container>
+              onChange={e => setBio(e.target.value)} />
+            </Form.Group>
+          <Form.Group as={Col}>
+            <Form.Label>Social Media</Form.Label>
+            <Form.Group as={Container} >
+              <InputGroup >
+                <InputGroup.Prepend>
+                  <InputGroup.Text>
+                    <i className="fab fa-instagram"></i>
+                  </InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl type="text" placeholder="Instagram" size="lg"
+                  value={Instagram}
+                  onChange={e => setInstagram(e.target.value)}  />
+              </InputGroup>
+            </Form.Group>
+            <Form.Group as={Container} >
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text>
+                    <i className="fab fa-facebook"></i>
+                  </InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl type="text"placeholder="Facebook" size="lg"
+                  value={Facebook}
+                  onChange={e => setFacebook(e.target.value)} />
+              </InputGroup>
+            </Form.Group>
+
+            <Form.Group as={Container} >
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text>
+                    <i className="fab fa-snapchat"></i>
+                  </InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl type="text" placeholder="Snapchat" size="lg"
+                  value={Snapchat}
+                  onChange={e => setSnapchat(e.target.value)} />
+              </InputGroup>
+            </Form.Group>
+
+            <Form.Group as={Container} >
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text>
+                    <i className="fab fa-linkedin"></i>
+                  </InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl type="text" placeholder="LinkedIn" size="lg"
+                  value={LinkedIn}
+                  onChange={e => setLinkedIn(e.target.value)} />
+              </InputGroup>
+            </Form.Group>
+          </Form.Group>
+      </Form.Row>
+    
+      <Form.Row >
+        <Col  md={{ span: 6, offset: 3 }} style={{textAlign:"center"}}>
+          <Button style={{width:"60%"}} size="lg" type="submit"
+         disabled={!validateForm()} >Continue</Button></Col>
+      </Form.Row>
+    </Form> 
   );
 }
 export default CreateAccount;
