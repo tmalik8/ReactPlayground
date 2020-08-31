@@ -14,7 +14,7 @@ const MissionsCarousel = ({items}) => {
         {items.map(({img, capture, alt}, i) => (
             <Carousel.Item key={i}>
               <div className='img-container'>
-                <img src={require(`../resources/BLM.png`)} alt={alt}/>
+                <img src={img} alt={alt}/>
               </div>
               <p className='text-center'>{capture}</p>
             </Carousel.Item>
