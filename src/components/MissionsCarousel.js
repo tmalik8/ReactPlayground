@@ -5,7 +5,7 @@ import '../styles/MissionsCarousel.css'
 const MissionsCarousel = ({items}) => {
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
 
