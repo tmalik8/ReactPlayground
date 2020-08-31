@@ -6,30 +6,41 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button"
+import {Modal} from "react-bootstrap"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom Components*/
 
-import IncrementButton from "./IncrementButton";
-import InputField from "./InputField";
-import ToastWrapper from "./ToastWrapper";
-import InternInfoDisplay from "./InternInfoDisplay";
-import LightModal from "./lightModal";
-import FadeText from "./FadeText";
-import NavBar from "./navBar"
-import PopOverTrigger from "./PopOverButton";
-import LanguageList from './LanguageList';
-import JokeModal from "./JokeModal";
+import IncrementButton from "./practice/IncrementButton";
+import InputField from "./practice/InputField";
+import ToastWrapper from "./practice/ToastWrapper";
+import InternInfoDisplay from "./practice/InternInfoDisplay";
+import LightModal from "./practice/lightModal";
+import FadeText from "./practice/FadeText";
+import NavBar from "./practice/navBar"
+import PopOverTrigger from "./practice/PopOverButton";
+import LanguageList from './practice/LanguageList';
+import JokeModal from "./practice/JokeModal";
+import Counter from './practice/Counter';
+
+/** Components Continued */
+
+import PeopleComponent from "./PeopleComponent";
+import CreatePost from "./CreatePost"
+import ConfirmationBox from "./ConfirmationBox";
 import LoginPage from "./LoginPage";
 
 
 /* Models/Services */
-
 import {Intern} from "../model/Intern";
+
 
 // import JokeModal from "./JokeModal";
 
+import profilePic from '../resources/profilePicture.jpeg'
+import DisplayPost from "./DisplayPost";
 
 let amonte = new Intern(
   "Amonte",
@@ -119,10 +130,77 @@ const items = [
 ]
 
 
-const Playground = () => {
+let kyleProfile = {
+  firstName: "Kyle",
+  lastName: "Kobayashi",
+  city: "Miami",
+  state: "FL",
+  country: "US",
+  profileImage:profilePic
+};
+
+let amonteProfile = {
+  firstName: "Amonte",
+  lastName: "Andrews",
+  city: "St Petersburg",
+  state: "FL",
+  country: "US",
+  profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
+};
+
+let postData = {
+  content: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
+  time: new Date("August 25, 2020 03:24:00"),
+  imgs: ["https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg", "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg","https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg"],
+  //video: "https://www.youtube.com/embed/ttIWUvxnuEo",
+  stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
+}
+
+
+const ConfirmModal = ({header, content}) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const _header = header;
+  const _content = content;
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Test Confirm Modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+
+        </Modal.Header>
+        <Modal.Body>
+        <ConfirmationBox header={_header} content={_content}  />
+        <Button  className="d-flex justify-content-center" style={{backgroundColor:"#402366", color:"white",width:"80%",margin:"0 auto 0 auto"}}  onClick={handleClose}>
+            Okay
+          </Button>
+
+
+        </Modal.Body>
+        {/* <Modal.Footer>
+
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
+    </>
+  );
+
+}
+
+
+const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
+
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
+
   return (
     <Container>
       <NavBar NavTitles={NavTitle}/>
@@ -133,8 +211,15 @@ const Playground = () => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Row className='justify-content-center'>
+                <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
+        </Row>
+
+        <Counter></Counter>
         <Container>
           <LoginPage items={items}/>
+          <DisplayPost post={postData} profile={amonteProfile}/>
+        <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
               <InternInfoDisplay
@@ -221,6 +306,8 @@ const Playground = () => {
                   {name: 'Swift', key: '4'},
                   {name: 'C', key: '5'},
                 ]}/>
+                <PeopleComponent profile={kyleProfile} />
+                <PeopleComponent profile={amonteProfile} />
               </InternInfoDisplay>
             </Col>
             <Col className="my-3">
@@ -275,6 +362,7 @@ const Playground = () => {
       <Jumbotron hidden>
         <InputField/>
       </Jumbotron>
+
     </Container>
   )
 };
