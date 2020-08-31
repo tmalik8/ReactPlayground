@@ -1,54 +1,45 @@
 .carousel {
-  width: 660px;
-  min-height: 570px;
   background-color: white;
-  display: flex;
-  flex-direction: column-reverse;
-  border-radius: 10px;
-  margin: 75px auto auto;
+  margin: 3%;
 }
+
 .carousel .carousel-inner {
-  width: 60%;
   margin: auto;
-  margin-bottom: 10px;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: flex-end;
+  padding: 10%;
+  padding-bottom: 20%;
 }
+
 .carousel .carousel-inner .carousel-item .img-container {
-  display: flex;
-  margin: auto;
-  height: 230px;
-  width: 240px;
-  text-align: center;
-  border-radius: 10px;
+  margin: 10%;
 }
+
 .carousel .carousel-inner .carousel-item .img-container img {
-  width: 225px;
+  width: 100%;
   margin: auto;
 }
+
 .carousel .carousel-indicators {
-  position: relative;
-  flex: 1;
-  align-items: center;
+  margin: 10%;
 }
+
 .carousel .carousel-indicators li {
   background-color: white;
   border-radius: 100%;
   width: 12px;
   height: 12px;
   border: 1px solid #1d2124;
-  margin-left: 9px;
-  margin-right: 9px;
+  margin-left: 4%;
+  margin-right: 4%;
 }
+
 .carousel .carousel-indicators .active {
   background-color: #1d2124;
 }
+
 .carousel .carousel-control-next {
   display: none;
 }
+
 .carousel .carousel-control-prev {
   display: none;
 }
-
-/*# sourceMappingURL=MissionsCarousel.css.map */

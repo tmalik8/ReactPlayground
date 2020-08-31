@@ -1,22 +1,26 @@
 .login-page {
   background-color: #F0F0F0;
-  display: flex;
-  min-height: 800px;
+  padding: 5%;
 }
 
 .welcome-section {
-  display: block;
-  margin: 175px auto auto;
   text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
 .welcome-section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 10%;
 }
+
 .welcome-section p {
   margin: 0;
   font-size: 12px;
 }
+
 .welcome-section .form-wrapper {
-  width: 275px;
-  margin-top: 75px;
+  width: 80%;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
 }
