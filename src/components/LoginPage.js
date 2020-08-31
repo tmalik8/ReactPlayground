@@ -2,24 +2,8 @@ import React from 'react';
 import MissionsCarousel from "./MissionsCarousel";
 import {Container, Row, Col, Form, Button} from "react-bootstrap";
 
-const items = [
-  {
-    img: "../resources/BLM.png",
-    alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  },
-  {
-    img: "../resources/BLM.png",
-    alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  },
-  {
-    img: "../resources/BLM.png",
-    alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-  }
-]
-const LoginPage = () => {
+
+const LoginPage = ({items}) => {
   return (
     <Container className='login-page'>
       <Row>

@@ -21,7 +21,7 @@ import NavBar from "./navBar"
 import PopOverTrigger from "./PopOverButton";
 import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
-
+import LoginPage from "./LoginPage";
 
 
 /* Models/Services */
@@ -93,17 +93,35 @@ let kyle = new Intern(
 );
 
 let luis = new Intern(
-  "Luis", 
-  "Senior at George Mason University", 
-  "Intern (FrontEnd Web)", 
+  "Luis",
+  "Senior at George Mason University",
+  "Intern (FrontEnd Web)",
   "https://i.pinimg.com/600x315/88/5b/7b/885b7b783181234c51ea17ec48a02506.jpg",
   new Date("8/30/20")
 );
- 
+
+const items = [
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "../resources/BLM.png",
+    alt:"blm",
+    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
+
 
 const Playground = () => {
   const [show, setShow] = useState(false);
-  const[showJoke, setJoke]=useState(false); 
+  const[showJoke, setJoke]=useState(false);
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
   return (
     <Container>
@@ -116,6 +134,7 @@ const Playground = () => {
         </span>
         </ToastWrapper>
         <Container>
+          <LoginPage items={items}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
               <InternInfoDisplay
@@ -238,7 +257,7 @@ const Playground = () => {
                 onClick={() => {
                   setJoke(true);
                 }}>
-                <JokeModal 
+                <JokeModal
                 value={showJoke}
                 hide={()=>setJoke(false)}/>
                 <div>Programming Joke: What is a ghost's favorite type?</div>
