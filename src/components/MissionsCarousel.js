@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Carousel from "react-bootstrap/Carousel";
-import '../styles/MissionsCarousel.css'
+import '../styles/MissionsCarousel.css';
 
 const MissionsCarousel = ({items}) => {
   const [index, setIndex] = useState(0);

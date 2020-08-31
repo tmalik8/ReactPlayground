@@ -1,6 +1,7 @@
 import React from 'react';
 import MissionsCarousel from "./MissionsCarousel";
 import {Container, Row, Col, Form, Button} from "react-bootstrap";
+import '../styles/LoginPage.css';
 
 
 const LoginPage = ({items}) => {
