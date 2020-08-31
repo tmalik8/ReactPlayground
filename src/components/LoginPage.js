@@ -8,10 +8,10 @@ const LoginPage = ({items}) => {
   return (
     <Container className='login-page'>
       <Row>
-        <Col xs={12} md={6}>
+        <Col xs={12} lg={6}>
           <MissionsCarousel items={items}/>
         </Col>
-        <Col xs={12} md={6} className='welcome-section'>
+        <Col xs={12} lg={6} className='welcome-section'>
           <h2>Welcome to TurnUp</h2>
           <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
           <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
