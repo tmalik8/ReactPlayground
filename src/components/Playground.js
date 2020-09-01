@@ -30,7 +30,7 @@ import Counter from './practice/Counter';
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
-
+import NavBarComponent from "./NavBarComponent"
 
 
 /* Models/Services */
@@ -185,6 +185,7 @@ const Playground = (props) => {
   return (
     <Container>
       <NavBar NavTitles={NavTitle}/>
+      <NavBarComponent img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
       <Jumbotron>
         <h1 className="header">TurnUp React Playground</h1>
         <ToastWrapper title="Welcome!">
