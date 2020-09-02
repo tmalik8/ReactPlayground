@@ -30,8 +30,7 @@ import Counter from './practice/Counter';
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
-
-
+import MissionsCarousel from "./MissionsCarousel"
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -110,6 +109,25 @@ let luis = new Intern(
   "https://i.pinimg.com/600x315/88/5b/7b/885b7b783181234c51ea17ec48a02506.jpg",
   new Date("8/30/20")
 );
+
+const items = [
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "TurnUp believes People’s Rights are Human Rights and Human Rights are People’s Rights",
+  },
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
+
 
 let kyleProfile = {
   firstName: "Kyle",
@@ -198,6 +216,14 @@ const Playground = (props) => {
 
         <Counter></Counter>
         <Container>
+          <Row>
+            <Col><MissionsCarousel items={items} header={"Welcome to Turnup!"}></MissionsCarousel></Col>
+            <Col><div>Login Component</div></Col>
+          </Row>
+        </Container>
+        
+        <Container>
+          
           <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
