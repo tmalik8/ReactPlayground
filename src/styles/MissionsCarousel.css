@@ -1,25 +1,21 @@
 .carousel {
   background-color: white;
-  margin: 3%;
 }
 
 .carousel .carousel-inner {
-  margin: auto;
   padding: 10%;
   padding-bottom: 20%;
 }
 
-.carousel .carousel-inner .carousel-item .img-container {
-  margin: 10%;
-}
 
-.carousel .carousel-inner .carousel-item .img-container img {
+.carousel .img-container img {
   width: 100%;
-  margin: auto;
+  margin-top:10%;
+  
 }
 
-.carousel .carousel-indicators {
-  margin: 10%;
+.carousel .caption {
+  margin-top:10%;
 }
 
 .carousel .carousel-indicators li {
@@ -34,12 +30,4 @@
 
 .carousel .carousel-indicators .active {
   background-color: #1d2124;
-}
-
-.carousel .carousel-control-next {
-  display: none;
-}
-
-.carousel .carousel-control-prev {
-  display: none;
 }

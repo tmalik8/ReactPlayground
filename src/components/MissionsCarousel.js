@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import Carousel from "react-bootstrap/Carousel";
+import {Carousel,Container} from "react-bootstrap";
 import '../styles/MissionsCarousel.css';
 
-const MissionsCarousel = ({items}) => {
+const MissionsCarousel = ({items,header}) => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
@@ -11,14 +11,17 @@ const MissionsCarousel = ({items}) => {
 
   return (
       <Carousel activeIndex={index} onSelect={handleSelect}>
-        {items.map(({img, capture, alt}, i) => (
+        {items.map((item, i) => (
             <Carousel.Item key={i}>
+              <Container className='text-center'>
+              <h2>{header}</h2>
+              <p className="caption">{item.caption}</p>
               <div className='img-container'>
-                <img src={img} alt={alt}/>
+                <img src={item.img} alt={item.alt}/>
               </div>
-              <p className='text-center'>{capture}</p>
+              </Container>
             </Carousel.Item>
-        ))}
+                  ))}
       </Carousel>
   );
 };

@@ -30,8 +30,7 @@ import Counter from './practice/Counter';
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
-import LoginPage from "./LoginPage";
-
+import MissionsCarousel from "./MissionsCarousel"
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -115,17 +114,17 @@ const items = [
   {
     img: "/img/BLM.png",
     alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    caption: "TurnUp believes People’s Rights are Human Rights and Human Rights are People’s Rights",
   },
   {
     img: "/img/BLM.png",
     alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
   {
     img: "/img/BLM.png",
     alt:"blm",
-    capture: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   }
 ]
 
@@ -217,7 +216,14 @@ const Playground = (props) => {
 
         <Counter></Counter>
         <Container>
-          <LoginPage items={items}/>
+          <Row>
+            <Col><MissionsCarousel items={items} header={"Welcome to Turnup!"}></MissionsCarousel></Col>
+            <Col><div>Login Component</div></Col>
+          </Row>
+        </Container>
+        
+        <Container>
+          
           <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost name='James Foody' location='Cambridge, MA, US' img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
