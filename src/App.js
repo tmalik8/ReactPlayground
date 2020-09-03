@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 /**stylesheets */
 import "bootstrap/dist/css/bootstrap.min.css";
 import './styles/app.css';
+import './styles/TurnUp.css'
 
 /**React Components */
 import Container from "react-bootstrap/Container";
@@ -16,6 +17,7 @@ import ReactTask2 from "./components/interns/ReactTask2";
 import soniaPage from "./components/interns/soniaPage";
 import tanyaPage from "./components/interns/tanyaPage";
 import AdilPage from "./components/interns/AdilPage";
+import CreateAccount from "./components/CreateAccount";
 
 /** React-redux Components */
 import { Provider } from 'react-redux';
@@ -38,6 +40,7 @@ const App = () => {
           <Route path="/interns/soniaPage" component={soniaPage}/>
           <Route path="/interns/tanyaPage" component={tanyaPage}/>
           <Route path="/interns/AdilPage" component={AdilPage}/>
+          <Route path="/CreateAccount" component={CreateAccount}/>
           <Route component={PageNotFound}/>
         </Switch>
       </Container>
