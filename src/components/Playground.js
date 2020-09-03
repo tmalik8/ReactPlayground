@@ -221,6 +221,7 @@ const Playground = (props) => {
             <Col><div>Login Component</div></Col>
           </Row>
         </Container>
+        <Container>
          <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
