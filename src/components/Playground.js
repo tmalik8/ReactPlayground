@@ -40,6 +40,8 @@ import {Intern} from "../model/Intern";
 
 import profilePic from '../resources/profilePicture.jpeg'
 import DisplayPost from "./DisplayPost";
+import Icon from "./Icon";
+
 
 let amonte = new Intern(
   "Amonte",
@@ -155,6 +157,11 @@ let postData = {
   stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
 }
 
+function myFunction() {
+  console.log("running func");
+}
+let icon={name:"BsFillAlarmFill", func:{myFunction}};
+
 
 const ConfirmModal = ({header, content}) => {
   const [show, setShow] = useState(false);
@@ -194,6 +201,8 @@ const ConfirmModal = ({header, content}) => {
 }
 
 
+
+
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
@@ -222,6 +231,7 @@ const Playground = (props) => {
           </Row>
         </Container>
         <Container>
+          <Icon icon={icon}/>
          <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
