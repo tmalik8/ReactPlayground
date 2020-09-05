@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-// import PeopleComponent from "./PeopleComponent";
+import PeopleComponent from "./PeopleComponent";
 import {ImLocation} from 'react-icons/im';
 import {BsCalendar, BsClockFill, BsFillTagFill} from 'react-icons/bs';
 import '../styles/DisplayEvent.css';
@@ -45,8 +45,7 @@ const DisplayEvent = ({event, profile}) => {
           <Col xs={12} md={8}>
             <Row xs={1}>
               <Col>
-                {/* <PeopleComponent /> */}
-                <p>[People Component]</p>
+                <PeopleComponent profile={profile}/>
               </Col>
               <Col>
                 {cutoffDesc(event.description)}

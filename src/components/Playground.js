@@ -23,6 +23,7 @@ import LanguageList from './LanguageList';
 import JokeModal from "./JokeModal";
 import PeopleComponent from "./PeopleComponent";
 import Counter from './Counter';
+import DisplayEvent from './DisplayEvent';
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -119,6 +120,16 @@ let amonteProfile = {
   profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
 };
 
+const event = {
+  name: "Lorem ipsum dolor sit amet",
+  img: "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg",
+  description: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
+  tags: ["Activism", "#TimeForChange"],
+  date: "Sunday, May 25, 2020",
+  time: "8:00 AM - 12:00 PM",
+  location: "Washington Square Park"
+}
+
 
 
 const Playground = (props) => {
@@ -130,6 +141,7 @@ const Playground = (props) => {
     <Container>
       <NavBar NavTitles={NavTitle}/>
       <Jumbotron>
+        <DisplayEvent event={event} profile={amonteProfile}/>
         <h1 className="header">TurnUp React Playground</h1>
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
