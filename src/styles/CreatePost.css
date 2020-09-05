@@ -1,5 +1,4 @@
 .create-post-wrapper {
- 
   padding: 15px;
   background-color: white;
   border-radius: 7px;
@@ -7,36 +6,14 @@
   color: #402366;
 }
 
-
-.create-post-wrapper  .name {
-  font-size: small;
-  font-weight: 700;
-}
-.create-post-wrapper .info, .create-post-wrapper .loc {
-  font-size:smaller;
-  font-weight: 700;
-}
-.create-post-wrapper .img-container {
-  width: 85px;
-  display: flex;
-}
-
-.create-post-wrapper .img-container img {
-  border: 3.75px solid #7E22FF;
-  border-radius: 100%;
-  margin: auto;
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-}
 .create-events-btn {
   border-radius: 0;
   padding: 5px 10px;
   display: block;
- 
+
   background-color: #F8F2FF;
   color: #402366;
-  
+
   font-weight: 700;
   text-align: center;
   transition: background-color 0.3s linear;
@@ -66,10 +43,10 @@
 }
 
 .create-post-btn {
-  
+
   background-color: #402366;
   color: white;
-  
+
 }
 
 .create-post-btn:hover {
