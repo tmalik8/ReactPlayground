@@ -1,21 +1,12 @@
 import React from 'react';
-import { BsFillAlarmFill } from "react-icons/bs";
-
+import { Button } from 'react-bootstrap';
 
 const Icon = ({icon}) => {
-
-  // async function getIcon(name) {
-  //   let type = name.substring(0,2);
-  //   const icon  =  await import('react-icons/' + type);
-  //   return icon;
-  // }
-
   return (
     <div>
-      <span onClick={() => icon.func}>
-        {/* {getIcon(icon.name)} */}
-        <BsFillAlarmFill/>
-      </span>
+      <Button variant="Light" onClick={() => icon.func()}>
+        {icon.icon}
+      </Button>
     </div>
   );
 };

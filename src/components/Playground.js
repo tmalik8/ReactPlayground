@@ -41,7 +41,7 @@ import {Intern} from "../model/Intern";
 import profilePic from '../resources/profilePicture.jpeg'
 import DisplayPost from "./DisplayPost";
 import Icon from "./Icon";
-
+import {BsFillAlarmFill} from 'react-icons/bs';
 
 let amonte = new Intern(
   "Amonte",
@@ -160,7 +160,7 @@ let postData = {
 function myFunction() {
   console.log("running func");
 }
-let icon={name:"BsFillAlarmFill", func:{myFunction}};
+let icon={icon:<BsFillAlarmFill/>, func: myFunction};
 
 
 const ConfirmModal = ({header, content}) => {
