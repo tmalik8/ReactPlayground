@@ -6,24 +6,31 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button"
+import {Modal} from "react-bootstrap"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 /* Custom Components*/
-
-import IncrementButton from "./IncrementButton";
-import InputField from "./InputField";
-import ToastWrapper from "./ToastWrapper";
-import InternInfoDisplay from "./InternInfoDisplay";
-import LightModal from "./lightModal";
-import FadeText from "./FadeText";
-import NavBar from "./navBar"
-import PopOverTrigger from "./PopOverButton";
-import LanguageList from './LanguageList';
-import JokeModal from "./JokeModal";
-import PeopleComponent from "./PeopleComponent";
-import Counter from './Counter';
+import IncrementButton from "./practice/IncrementButton";
+import InputField from "./practice/InputField";
+import ToastWrapper from "./practice/ToastWrapper";
+import InternInfoDisplay from "./practice/InternInfoDisplay";
+import LightModal from "./practice/lightModal";
+import FadeText from "./practice/FadeText";
+import NavBar from "./practice/navBar"
+import PopOverTrigger from "./practice/PopOverButton";
+import LanguageList from './practice/LanguageList';
+import JokeModal from "./practice/JokeModal";
+import Counter from './practice/Counter';
 import DisplayEvent from './DisplayEvent';
+
+/** Components Continued */
+
+import PeopleComponent from "./PeopleComponent";
+import CreatePost from "./CreatePost"
+import ConfirmationBox from "./ConfirmationBox";
+import MissionsCarousel from "./MissionsCarousel"
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -32,6 +39,7 @@ import {Intern} from "../model/Intern";
 // import JokeModal from "./JokeModal";
 
 import profilePic from '../resources/profilePicture.jpeg'
+import DisplayPost from "./DisplayPost";
 
 let amonte = new Intern(
   "Amonte",
@@ -102,6 +110,24 @@ let luis = new Intern(
   new Date("8/30/20")
 );
 
+const items = [
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "TurnUp believes People’s Rights are Human Rights and Human Rights are People’s Rights",
+  },
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    img: "/img/BLM.png",
+    alt:"blm",
+    caption: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt ollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
+
 let kyleProfile = {
   firstName: "Kyle",
   lastName: "Kobayashi",
@@ -130,11 +156,57 @@ const event = {
   location: "Washington Square Park"
 }
 
+let postData = {
+  content: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
+  time: new Date("August 25, 2020 03:24:00"),
+  imgs: ["https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg", "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg","https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg"],
+  //video: "https://www.youtube.com/embed/ttIWUvxnuEo",
+  stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
+}
+
+
+const ConfirmModal = ({header, content}) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const _header = header;
+  const _content = content;
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Test Confirm Modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+
+        </Modal.Header>
+        <Modal.Body>
+        <ConfirmationBox header={_header} content={_content}  />
+        <Button  className="d-flex justify-content-center" style={{backgroundColor:"#402366", color:"white",width:"80%",margin:"0 auto 0 auto"}}  onClick={handleClose}>
+            Okay
+          </Button>
+
+
+        </Modal.Body>
+        {/* <Modal.Footer>
+
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
+    </>
+  );
+
+}
 
 
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
+
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
 
   return (
@@ -148,8 +220,20 @@ const Playground = (props) => {
           🎉 🎉 🎉 🎉
         </span>
         </ToastWrapper>
+        <Row className='justify-content-center'>
+                <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
+        </Row>
+
         <Counter></Counter>
         <Container>
+          <Row>
+            <Col><MissionsCarousel items={items} header={"Welcome to Turnup!"}></MissionsCarousel></Col>
+            <Col><div>Login Component</div></Col>
+          </Row>
+        </Container>
+        <Container>
+         <DisplayPost post={postData} profile={amonteProfile}/>
+        <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
             <Col className="my-3">
               <InternInfoDisplay
