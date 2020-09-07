@@ -28,7 +28,15 @@
   color: gray;
 }
 
-.post .media img {
+.post .media {
+  margin: 0;
+}
+
+.post .media .img-col {
+  padding: 0.5%;
+}
+
+.post .media .img-col img {
   width: 100%;
 }
 

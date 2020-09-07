@@ -62,8 +62,9 @@ const DisplayPost = ({post, profile}) => {
   // Format the images if given, otherwise format the video if given
   const renderedMedia = [];
   if (post.imgs) {
+    let width = 12 / ((post.imgs.length % 4 === 0) ? 4 : post.imgs.length % 4);
     post.imgs.map((img, i) =>{
-      return <Col key={i} xs={4}><img src={img} alt="post media"/></Col>;
+      return <Col key={i} xs={width === 12 ? width : 6} md={width} className="img-col"><img src={img} alt="post media"/></Col>;
     }).forEach(imgCol => {renderedMedia.push(imgCol)});
 
   } else if (post.video) {
