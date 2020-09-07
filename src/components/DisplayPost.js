@@ -64,11 +64,11 @@ const DisplayPost = ({post, profile}) => {
   if (post.imgs) {
     let width = 12 / ((post.imgs.length % 4 === 0) ? 4 : post.imgs.length % 4);
     post.imgs.map((img, i) =>{
-      return <Col key={i} xs={width === 12 ? width : 6} md={width} className="img-col"><img src={img} alt="post media"/></Col>;
+      return <Col key={i} xs={width === 12 ? width : 6} md={width} className="media-col"><img src={img} alt="post media"/></Col>;
     }).forEach(imgCol => {renderedMedia.push(imgCol)});
 
   } else if (post.video) {
-    renderedMedia.push(<Col xs={12}><ResponsiveEmbed aspectRatio="16by9"><Iframe src={post.video} title="post media" allowFullScreen/></ResponsiveEmbed></Col>);
+    renderedMedia.push(<Col xs={12} className="media-col"><ResponsiveEmbed aspectRatio="16by9"><Iframe src={post.video} title="post media" allowFullScreen/></ResponsiveEmbed></Col>);
   }
 
   /**
@@ -89,6 +89,9 @@ const DisplayPost = ({post, profile}) => {
 
   return (
       <Container className="post">
+        <Row className="media">
+          {renderedMedia}
+        </Row>
         <Row>
           <Col xs={10}>
             <PeopleComponent profile={profile}/>
@@ -107,9 +110,6 @@ const DisplayPost = ({post, profile}) => {
           <Col>
             <p>{post.content}</p>
           </Col>
-        </Row>
-        <Row className="media">
-          {renderedMedia}
         </Row>
         <Row className="stats">
           <Col>
