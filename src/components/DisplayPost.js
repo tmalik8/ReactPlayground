@@ -12,14 +12,14 @@ import '../styles/DisplayPost.css';
 
 
 const ActionRow = ({post,user}) => {
-  
+
   //state
   const [liked,toggleLike] = useState(false)
   const [activeAction, setActiveAction] = useState("none")
-  
-  const likePost = () => 
+
+  const likePost = () =>
   {
-    
+
     console.log(`On->PostLikeToggle`,{post:post,user:user});
     toggleLike(!liked);
   }
@@ -33,7 +33,7 @@ const ActionRow = ({post,user}) => {
           <Col>
           {/** Will probably create a component */}
           {/*<IconButton> */}
-          <Button variant="Light" 
+          <Button variant="Light"
             onClick={() => {likePost();}} >
               <HiThumbUp className={liked ? "active" : ""} /></Button>
               {/** </IconButton> */}
@@ -58,30 +58,33 @@ const ActionRow = ({post,user}) => {
 
 const DisplayPost = ({post, profile}) => {
 
-  
+
   // Format the images if given, otherwise format the video if given
   const renderedMedia = [];
   if (post.imgs) {
     post.imgs.map((img, i) =>{
       return <Col key={i} xs={4}><img src={img} alt="post media"/></Col>;
     }).forEach(imgCol => {renderedMedia.push(imgCol)});
-    
+
   } else if (post.video) {
     renderedMedia.push(<Col xs={12}><ResponsiveEmbed aspectRatio="16by9"><Iframe src={post.video} title="post media" allowFullScreen/></ResponsiveEmbed></Col>);
   }
 
   /**
-   * Returns hours and minutes since post was posted
+   * Returns days, hours, and minutes since post was posted
    * @param {Date} time - Date of post
    */
   function calculateTimeSince(time) {
-    let minutesSince = Math.floor(((new Date()) - time) / (1000 * 60))
-    let hours = Math.floor(minutesSince / 60);
-    let minutes = Math.floor(minutesSince % 60);
-     return hours + " hr " + minutes + " min";
+    let seconds = Math.floor(((new Date()) - time) / 1000);
+    let days = Math.floor(seconds / (60 * 60 * 24));
+    seconds = seconds % (60 * 60 * 24);
+    let hours = Math.floor(seconds / (60 * 60));
+    seconds = seconds % (60 * 60);
+    let minutes = Math.floor(seconds / 60);
+     return days + "d " + hours + "h " + minutes + "m";
   }
 
- 
+
 
   return (
       <Container className="post">
