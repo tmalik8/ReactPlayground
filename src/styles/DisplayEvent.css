@@ -33,12 +33,25 @@
   margin: 0;
 }
 
-.event .info, .event .rsvp {
+.event .info {
   padding: 4% 7%;
+}
+
+.event .details {
+  text-align: right;
+  margin-bottom: 2%;
 }
 
 .event .details p, .event .more {
   color: indigo;
+}
+
+.event .details .detail {
+  padding: 1% 0;
+}
+
+.event .details p {
+  display: inline;
 }
 
 .event .details p.tag {
@@ -46,11 +59,12 @@
 }
 
 .event .details p svg {
-  margin-right: 2%;
+  margin-right: 1%;
+  margin-left: 2%;
 }
 
 .event .more {
-  float: right;
+  margin-left: 1%;
   text-decoration: underline;
 }
 
@@ -58,5 +72,6 @@
   background-color: indigo;
   border: none;
   border-radius: 0;
-  padding: 5% 10%;
+  padding: 2%;
+  width: 100%;
 }
