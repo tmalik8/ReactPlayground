@@ -47,19 +47,23 @@ const DisplayEvent = ({event, profile}) => {
               <Col xs={12} md={4}>
                 <PeopleComponent profile={profile}/>
               </Col>
-              <Col xs={12} md={8}>
+              <Col xs={12} md={8} className="details">
                 <Row>
-                  <Col>
+                  <Col className="detail">
                     {renderedTags}
                   </Col>
                 </Row>
                 <Row>
-                  <Col>
+                  <Col className="detail">
                     <p>
                       <BsCalendar/>
                       {event.date}
+                    </p>
+                    <p>
                       <BsClockFill/>
                       {event.time}
+                    </p>
+                    <p>
                       <ImLocation/>
                       {event.location}
                     </p>
