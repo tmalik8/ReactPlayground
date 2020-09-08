@@ -41,48 +41,40 @@ const DisplayEvent = ({event, profile}) => {
           </Col>
         </Row>
         <hr/>
-        <Row className="info">
-          <Col xs={12} md={8}>
-            <Row xs={1}>
-              <Col>
+        <Row xs={1} className="info">
+          <Col>
+            <Row>
+              <Col xs={12} md={4}>
                 <PeopleComponent profile={profile}/>
               </Col>
-              <Col>
-                {cutoffDesc(event.description)}
+              <Col xs={12} md={8}>
+                <Row>
+                  <Col>
+                    {renderedTags}
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <p>
+                      <BsCalendar/>
+                      {event.date}
+                      <BsClockFill/>
+                      {event.time}
+                      <ImLocation/>
+                      {event.location}
+                    </p>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
-          <Col xs={12} md={4} className="details">
-            <Row xs={1}>
-              <Col>
-                {renderedTags}
-              </Col>
-              <Col>
-                <p>
-                  <BsCalendar/>
-                  {event.date}
-                </p>
-              </Col>
-              <Col>
-                <p>
-                  <BsClockFill/>
-                  {event.time}
-                </p>
-              </Col>
-              <Col>
-                <p>
-                  <ImLocation/>
-                  {event.location}
-                </p>
-              </Col>
-            </Row>
+          <Col>
+            {cutoffDesc(event.description)}
           </Col>
-        </Row>
-        <Row className="rsvp">
-          <Col xs={12} sm={8}>
+          <Col>
             <p>[people icons] # People Going</p>
           </Col>
-          <Col xs={12} sm={4}>
+          <Col>
             <Button className="button">Remove RSVP</Button>
           </Col>
         </Row>
