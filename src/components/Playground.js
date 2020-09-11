@@ -31,6 +31,7 @@ import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
 import MissionsCarousel from "./MissionsCarousel"
+import SignupForm from "./TestingForm"
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -213,7 +214,7 @@ const Playground = (props) => {
         <Row className='justify-content-center'>
                 <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
         </Row>
-
+        <SignupForm/>
         <Counter></Counter>
         <Container>
           <Row>
