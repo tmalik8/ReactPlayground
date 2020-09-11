@@ -213,7 +213,7 @@ const Playground = (props) => {
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
         </span>
-        <Icon  
+        <Icon color={"gray"}
             onClick={() => {alert("icon click") }}>
               <BsFillAlarmFill /></Icon>
         </ToastWrapper>
