@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-const Icon = ({icon}) => {
+const Icon = ({onClick, children}) => {
   return (
     <div>
-      <Button variant="Light" onClick={() => icon.func()}>
-        {icon.icon}
+      <Button variant="Light" onClick={onClick}>
+        {children}
       </Button>
     </div>
   );

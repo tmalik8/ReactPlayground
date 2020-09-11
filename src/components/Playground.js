@@ -218,6 +218,9 @@ const Playground = (props) => {
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
         </span>
+        <Icon  
+            onClick={() => {alert("icon click") }}>
+              <BsFillAlarmFill /></Icon>
         </ToastWrapper>
         <Row className='justify-content-center'>
                 <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
@@ -231,7 +234,7 @@ const Playground = (props) => {
           </Row>
         </Container>
         <Container>
-          <Icon icon={icon}/>
+          
          <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
