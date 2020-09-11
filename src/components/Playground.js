@@ -157,11 +157,6 @@ let postData = {
   stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
 }
 
-function myFunction() {
-  console.log("running func");
-}
-let icon={icon:<BsFillAlarmFill/>, func: myFunction};
-
 
 const ConfirmModal = ({header, content}) => {
   const [show, setShow] = useState(false);
