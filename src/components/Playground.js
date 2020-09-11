@@ -40,6 +40,8 @@ import {Intern} from "../model/Intern";
 
 import profilePic from '../resources/profilePicture.jpeg'
 import DisplayPost from "./DisplayPost";
+import Icon from "./Icon";
+import {BsFillAlarmFill} from 'react-icons/bs';
 
 let amonte = new Intern(
   "Amonte",
@@ -194,6 +196,8 @@ const ConfirmModal = ({header, content}) => {
 }
 
 
+
+
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
@@ -209,6 +213,9 @@ const Playground = (props) => {
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
         </span>
+        <Icon color={"gray"}
+            onClick={() => {alert("icon click") }}>
+              <BsFillAlarmFill /></Icon>
         </ToastWrapper>
         <Row className='justify-content-center'>
                 <ConfirmModal header={"Post Successful!"} content="Lorem ipsum ...." />
@@ -222,6 +229,7 @@ const Playground = (props) => {
           </Row>
         </Container>
         <Container>
+          
          <DisplayPost post={postData} profile={amonteProfile}/>
         <CreatePost profile={amonteProfile}/>
           <Row xs={1} md={2} lg={3} className='justify-content-center'>
