@@ -17,6 +17,8 @@ import ReactTask2 from "./components/interns/ReactTask2";
 import soniaPage from "./components/interns/soniaPage";
 import AdilPage from "./components/interns/AdilPage";
 import CreateAccount from "./components/CreateAccount";
+import SignUpForm from "./components/TestingForm";
+
 
 /** React-redux Components */
 import { Provider } from 'react-redux';
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/interns/soniaPage" component={soniaPage}/>
           <Route path="/interns/AdilPage" component={AdilPage}/>
           <Route path="/CreateAccount" component={CreateAccount}/>
+          <Route path="/TestingForm" component={SignUpForm}/>
           <Route component={PageNotFound}/>
         </Switch>
       </Container>
