@@ -13,11 +13,11 @@ import logo from '../resources/turnUpLogo.png'
 
 const Navigation = () => {
   return (
-    <Navbar variant="dark" expand="lg" className="navbar navbar-expand-lg">
+    <Navbar style={{backgroundColor:"cornflowerblue"}} variant="dark" expand="lg" className="navbar navbar-expand-lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="center-navbar m-auto">
-        
+        <Image className="align-top" alt="TurnUp Activism" src={logo} width="150" height="50"/>
           <Link className="nav-link" to='/'>Playground</Link>
           <Link className="nav-link" to='/events'>Events</Link>
           <Link className="nav-link" to='/conversations'>Conversations</Link>

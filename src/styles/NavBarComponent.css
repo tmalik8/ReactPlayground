@@ -1,49 +1,44 @@
-.nav{
+.main-nav a 
+{
+    font-size:40px;
+}
 
-    text-align: center;
-    width:100%;
-    }
-    
-    .turnup-nav .logo
+@media (max-width: 576px)
+{
+    .main-nav a
     {
-        height:75%;
+        font-size:20px;
     }
-    .turnup-nav .profile-img {
-    
+}
+.main-nav *, .side-nav *
+{
+    color:white;
+}
+.logout {
+    padding:2%
+}
+.profile-img {
     border: 1px solid transparent;
     border-color: white;
     width: 50px;
     height: 50px;
-    }
-    
-    
-    .turnup-nav {
-    
+}
+
+.turnup-nav {
     background: #402366 0% 0% no-repeat padding-box;
-    height:100px;
-    
-    }
-    
-    .turnup-nav div {
-        color:white;
-    
-    }
-    
-    
-    .turnup-nav .links{
-        margin:0 auto 0 auto;
-        display:inline-flex;
-    
-    }
-    
-    .turnup-nav .links a {
-        margin-left:5%;
-    }
-    
-    .turnup-nav .toggles {
-        text-align: right;
-        display:inline-flex;
-    }
-    
-    
-    
+}
+
+.main-nav {
+    display:inline-flex;
+}
+
+.side-nav {
+    display:inline-block;
+}
+
+.main-nav a {
+    margin-right:3%;
+}
+.side-nav a {
+    margin-right:2%;
+}
