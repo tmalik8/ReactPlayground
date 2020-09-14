@@ -15,8 +15,6 @@ function click(e)
 
 }
 
-
-
 const PhoneConfirm = () => 
 {
   return (

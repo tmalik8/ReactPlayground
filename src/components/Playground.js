@@ -26,6 +26,8 @@ import PhoneConfirm from "./PhoneConfirm";
 import JokeModal from "./practice/JokeModal";
 import Alert from "./practice/Alert";
 import Counter from './practice/Counter';
+import DisplayEvent from './DisplayEvent';
+import Icon from '.Icon';
 
 
 /** Components Continued */
@@ -122,7 +124,6 @@ new Date("8/21/20")
  
 
 
-
 let kyleProfile = {
   firstName: "Kyle",
   lastName: "Kobayashi",
@@ -143,6 +144,8 @@ let amonteProfile = {
 
 
 
+
+
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
@@ -152,11 +155,15 @@ const Playground = (props) => {
     <Container>
       <NavBar NavTitles={NavTitle}/>
       <Jumbotron>
+        <DisplayEvent profile={amonteProfile}/>
         <h1 className="header">TurnUp React Playground</h1>
         <ToastWrapper title="Welcome!">
         <span role="img" aria-label="tada">
           🎉 🎉 🎉 🎉
         </span>
+        <Icon color={"gray"}
+            onClick={() => {alert("icon click") }}>
+              </Icon>
         </ToastWrapper>
 
         <Row>
