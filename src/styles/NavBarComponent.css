@@ -1,42 +1,49 @@
 .nav{
 
-text-align: center;
-width:100%;
-}
-
-.Profile-Pic{
-
-border: 1px solid transparent;
-border-color: white;
-width: 50px;
-height: 50px;
-}
-
-.nav-left > :any-link {
-
-margin-left:0px;
-margin-right:0px;
-
-}
-
-.Navbar {
-
-background: #402366 0% 0% no-repeat padding-box;
-}
-
-.Logout-link{
-
-font: normal normal 300 20px/25px;
-letter-spacing: 0px;
-color: #FFFFFF;
-opacity: 1;
-}
-
-.logo{
-
-width: 150px;
-height: 50px;
-background-color: white;
-}
-
-
+    text-align: center;
+    width:100%;
+    }
+    
+    .turnup-nav .logo
+    {
+        height:75%;
+    }
+    .turnup-nav .profile-img {
+    
+    border: 1px solid transparent;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    }
+    
+    
+    .turnup-nav {
+    
+    background: #402366 0% 0% no-repeat padding-box;
+    height:100px;
+    
+    }
+    
+    .turnup-nav div {
+        color:white;
+    
+    }
+    
+    
+    .turnup-nav .links{
+        margin:0 auto 0 auto;
+        display:inline-flex;
+    
+    }
+    
+    .turnup-nav .links a {
+        margin-left:5%;
+    }
+    
+    .turnup-nav .toggles {
+        text-align: right;
+        display:inline-flex;
+    }
+    
+    
+    
