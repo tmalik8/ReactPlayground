@@ -13,35 +13,25 @@ import '../styles/NavBarComponent.css';
 
 const NavBarComponent = ({ img }) => {
     return (
-        <>
-        <Navbar collapseOnSelect className="turnup-nav" expand="lg">
-            <Navbar.Brand href="#home"><Image className="logo" alt="TurnUp Activism" src={logo}/></Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-            <Form className="main-nav col-lg-9 col-sm-8 justify-content-center" inline>
-            
-                    <Nav.Link href="#home"><AiFillHome /><span>Home</span></Nav.Link>
-                    <Nav.Link href="#events"><BiCalendarEvent /><span>Events</span></Nav.Link>
-                    <Nav.Link href="#friends"><FaUserFriends /><span>Connect</span></Nav.Link>
-                    <Nav.Link href="#resources"><FaBook /><span>Resources</span></Nav.Link>
-            
-                </Form>
-                {/* <Nav className="justify-content-center mr-auto">
+            <Navbar collapseOnSelect className="turnup-nav" expand="lg">
+                <Navbar.Brand href="#home"><Image className="logo" alt="TurnUp Activism" src={logo} /></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Form className="main-nav col-lg-9 col-sm-8 justify-content-center" inline>
+                        <Nav.Link href="#home"><AiFillHome /><span>Home</span></Nav.Link>
+                        <Nav.Link href="#events"><BiCalendarEvent /><span>Events</span></Nav.Link>
+                        <Nav.Link href="#friends"><FaUserFriends /><span>Connect</span></Nav.Link>
+                        <Nav.Link href="#resources"><FaBook /><span>Resources</span></Nav.Link>
+                    </Form>
 
-                   
-
-
-                </Nav> */}
-                <Form className="side-nav  col-lg-3 col-sm-4" inline>
-                <Link href="notifications"><AiFillBell /></Link>
-                    <Link href="#settings"><FaCog /></Link>
-                    <Link href="#profilePage"><Image className="profile-img" src={img} roundedCircle /></Link>
-                    <Link href="#SignOutPage" className="logout">Log Out</Link>
-                </Form>
-               
-            </Navbar.Collapse>
-        </Navbar>
-        </>
+                    <Form className="side-nav  col-lg-3 col-sm-4" inline>
+                        <Link href="notifications"><AiFillBell /></Link>
+                        <Link href="#settings"><FaCog /></Link>
+                        <Link href="#profilePage"><Image className="profile-img" src={img} roundedCircle /></Link>
+                        <Link href="#SignOutPage" className="logout">Log Out</Link>
+                    </Form>
+                </Navbar.Collapse>
+            </Navbar>
     );
 };
 
