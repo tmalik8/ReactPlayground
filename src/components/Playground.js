@@ -18,7 +18,6 @@ import ToastWrapper from "./practice/ToastWrapper";
 import InternInfoDisplay from "./practice/InternInfoDisplay";
 import LightModal from "./practice/lightModal";
 import FadeText from "./practice/FadeText";
-import NavBar from "./practice/navBar"
 import PopOverTrigger from "./practice/PopOverButton";
 import LanguageList from './practice/LanguageList';
 import JokeModal from "./practice/JokeModal";
@@ -31,7 +30,7 @@ import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
 import MissionsCarousel from "./MissionsCarousel"
-import NavBarComponent from "./NavBarComponent"
+
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -212,12 +211,11 @@ const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
 
-  const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
+  
 
   return (
     <Container>
-      <NavBar NavTitles={NavTitle}/>
-      <NavBarComponent img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
+  
       <Jumbotron>
         <DisplayEvent event={event} profile={amonteProfile}/>
         <h1 className="header">TurnUp React Playground</h1>

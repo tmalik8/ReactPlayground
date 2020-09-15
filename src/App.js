@@ -10,7 +10,6 @@ import './styles/TurnUp.css'
 import Container from "react-bootstrap/Container";
 
 /* Custom Components*/
-import Navigation from "./components/Navigation";
 import Playground from "./components/Playground";
 import PageNotFound from "./components/PageNotFound";
 import ReactTask2 from "./components/interns/ReactTask2";
@@ -32,11 +31,11 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Navigation />
         <NavBarComponent img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg' />
         <Container className="my-4">
           <Switch>
-            <Route path='/' exact component={Playground} />
+          <Route path='/' exact component={Playground} />
+            <Route path='/playground' exact component={Playground} />
             <Route path='/interns/reacttask2' component={ReactTask2} />
             <Route path="/interns/soniaPage" component={soniaPage} />
             <Route path="/interns/AdilPage" component={AdilPage} />
