@@ -31,6 +31,7 @@ import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
 import ConfirmationBox from "./ConfirmationBox";
 import MissionsCarousel from "./MissionsCarousel"
+import NavBarComponent from "./NavBarComponent"
 
 /* Models/Services */
 import {Intern} from "../model/Intern";
@@ -216,6 +217,7 @@ const Playground = (props) => {
   return (
     <Container>
       <NavBar NavTitles={NavTitle}/>
+      <NavBarComponent img='https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg'/>
       <Jumbotron>
         <DisplayEvent event={event} profile={amonteProfile}/>
         <h1 className="header">TurnUp React Playground</h1>
