@@ -51,8 +51,12 @@
 }
 
 .main-nav a {
-    margin-right:3%;
+    margin-right:5%;
 }
 .side-nav a {
     margin-right:2%;
+}
+
+.main-nav .dropdown-item {
+    color:#402366;
 }
