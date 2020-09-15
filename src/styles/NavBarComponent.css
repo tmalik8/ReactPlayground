@@ -1,15 +1,25 @@
-.main-nav a 
+
+.main-nav span {
+    font-size:12px;
+    display:inherit;
+    font-weight: bold;
+}
+
+.main-nav svg 
 {
     font-size:40px;
 }
 
 @media (max-width: 576px)
 {
-    .main-nav a
+    .main-nav svg
     {
         font-size:20px;
     }
 }
+
+
+
 .main-nav *, .side-nav *
 {
     color:white;
@@ -26,6 +36,10 @@
 
 .turnup-nav {
     background: #402366 0% 0% no-repeat padding-box;
+}
+
+.main-nav a  {
+    text-align: center;
 }
 
 .main-nav {

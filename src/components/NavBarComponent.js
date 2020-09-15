@@ -18,12 +18,12 @@ const NavBarComponent = ({ img }) => {
             <Navbar.Brand href="#home"><Image className="logo" alt="TurnUp Activism" src={logo}/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-            <Form className="main-nav col-lg-9 col-sm-7 justify-content-center" inline>
+            <Form className="main-nav col-lg-9 col-sm-8 justify-content-center" inline>
             
-                    <Nav.Link href="#home"><AiFillHome /></Nav.Link>
-                    <Nav.Link href="#events"><BiCalendarEvent /></Nav.Link>
-                    <Nav.Link href="#friends"><FaUserFriends /></Nav.Link>
-                    <Nav.Link href="#resources"><FaBook /></Nav.Link>
+                    <Nav.Link href="#home"><AiFillHome /><span>Home</span></Nav.Link>
+                    <Nav.Link href="#events"><BiCalendarEvent /><span>Events</span></Nav.Link>
+                    <Nav.Link href="#friends"><FaUserFriends /><span>Connect</span></Nav.Link>
+                    <Nav.Link href="#resources"><FaBook /><span>Resources</span></Nav.Link>
             
                 </Form>
                 {/* <Nav className="justify-content-center mr-auto">
