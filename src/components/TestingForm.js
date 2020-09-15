@@ -37,7 +37,7 @@ const SignupForm = () => {
           <label htmlFor="email">Email</label>
           <Field name="email" type="email" data-testid="email"/>
           <ErrorMessage name="email" />
-          <button type="submit">Submit</button>
+          <button type="submit" data-testid="Submit">Submit</button>
         </Form>
       )}
     </Formik>
