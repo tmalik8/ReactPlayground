@@ -13,7 +13,7 @@ import logo from '../resources/turnUpLogo.png'
 
 const Navigation = () => {
   return (
-    <Navbar variant="dark" expand="lg" className="navbar navbar-expand-lg">
+    <Navbar style={{backgroundColor:"cornflowerblue"}} variant="dark" expand="lg" className="navbar navbar-expand-lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="center-navbar m-auto">
