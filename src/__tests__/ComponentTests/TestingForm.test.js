@@ -41,13 +41,12 @@ describe("Testing Form", () => {
     //submit form
     fireEvent.click(button);
 
-
-    wait(() => {
-      expect(firstNameInput.innerHTML).not.toBe(null);
-      expect(firstNameInput.innerHTML.length).toBeLessThanOrEqual(15);
-      expect(lastNameInput.innerHTML).toBeRequired();
-      expect(emailInput.innerHTML).toBeInvalid();
-    });
+    // wait(() => {
+      expect(firstNameInput.value).not.toBe(null);
+      expect(firstNameInput.value.length).toBeLessThanOrEqual(15);
+      expect(lastNameInput).toBeRequired(); // doesn't work
+      expect(emailInput).toBeInvalid(); // doesn't work
+    // });
 
     //change input lastName
     fireEvent.change(lastNameInput, {
