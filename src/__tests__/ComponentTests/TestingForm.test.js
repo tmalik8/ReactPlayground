@@ -48,5 +48,36 @@ describe("Testing Form", () => {
       expect(lastNameInput.innerHTML).toBeRequired();
       expect(emailInput.innerHTML).toBeInvalid();
     });
+
+    //change input lastName
+    fireEvent.change(lastNameInput, {
+      target: {
+        value: "Merribi"
+      }
+    });
+
+
+    //change input email
+    fireEvent.change(emailInput, {
+      target: {
+        value: "adil@gmail.com"
+      }
+    });
+
+    //submit form
+    fireEvent.submit(button);
+    const expectedInfo = {
+      "firstName":"Adil",
+      "lastName":"Merribi",
+      "email":"adil@gmail.com"
+    }
+
+      expect(firstNameInput.value).not.toBe(null);
+      expect(firstNameInput.value.length).toBeLessThanOrEqual(15);
+      expect(lastNameInput.value).not.toBe(null);
+      expect(lastNameInput.value.length).toBeLessThanOrEqual(15);
+      expect(lastNameInput.value).not.toBe(null);
+      expect(emailInput).toBeValid();
+      //expect alert text to be expectedInfo
   });
 });
