@@ -30,13 +30,13 @@ const SignupForm = () => {
         <Form>
           <label htmlFor="firstName">First Name</label>
           <Field name="firstName" data-testid="firstName"/>
-          <ErrorMessage name="firstName" />
+          <div data-testid="firstNameError"><ErrorMessage name="firstName"/></div>
           <label htmlFor="lastName">Last Name</label>
           <Field name="lastName" data-testid="lastName"/>
-          <ErrorMessage name="lastName" />
+          <div data-testid="lastNameError"><ErrorMessage name="lastName"/></div>
           <label htmlFor="email">Email</label>
           <Field name="email" type="email" data-testid="email"/>
-          <ErrorMessage name="email" />
+          <div data-testid="emailError"><ErrorMessage name="email"/></div>
           <button type="submit" data-testid="Submit">Submit</button>
         </Form>
       )}

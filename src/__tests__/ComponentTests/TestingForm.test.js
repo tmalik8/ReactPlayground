@@ -5,8 +5,9 @@ import SignupForm from "../../components/TestingForm";
 
 describe("Testing Form", () => {
   it("submits values and fires", async () => {
-    const { findByTestId } = render(
-      <SignupForm />
+    const handleSubmit = jest.fn();
+    const { findByTestId, getByTestId } = render(
+      <SignupForm onSubmit={handleSubmit} />
     );
 
     const firstNameInput = await waitForElement(() => findByTestId("firstName"));
@@ -14,69 +15,57 @@ describe("Testing Form", () => {
     const emailInput = await waitForElement(() => findByTestId("email"));
     const button = await waitForElement(() => findByTestId("Submit"));
 
-    //change input firsName
-    fireEvent.change(firstNameInput, {
-      target: {
-        value: "Adil"
-      }
+    await wait(() => {
+      //change input firsName
+      fireEvent.change(firstNameInput, {
+        target: {
+          value: "Adil"
+        }
+      });
+
+      //blur field without input
+      fireEvent.blur(lastNameInput);
+
+      //change input email
+      fireEvent.change(emailInput, {
+        target: {
+          value: "adil@merribi"
+        }
+      });
+
+      //submit form
+      fireEvent.submit(button);
     });
 
-    //change input LastName
-    // fireEvent.change(lastNameInput, {
-    //   target: {
-    //     value: "Merribi"
-    //   }
-    // });
+    expect(firstNameInput.value).not.toBe(null);
+    expect(firstNameInput.value.length).toBeLessThanOrEqual(15);
+    expect(getByTestId("emailError")).toHaveTextContent("Invalid email address");
+    expect(getByTestId("lastNameError")).toHaveTextContent("Required");
 
 
-    //change input email
-    fireEvent.change(emailInput, {
-      target: {
-        value: "adil@merribi"
-      }
-    });
-    //blur field without input
-    fireEvent.blur(lastNameInput);
 
-    //submit form
-    fireEvent.click(button);
+    await wait(() => {
+      //change input lastName
+      fireEvent.change(lastNameInput, {
+        target: {
+          value: "Merribi"
+        }
+      });
 
-    // wait(() => {
-      expect(firstNameInput.value).not.toBe(null);
-      expect(firstNameInput.value.length).toBeLessThanOrEqual(15);
-      expect(lastNameInput).toBeRequired(); // doesn't work
-      expect(emailInput).toBeInvalid(); // doesn't work
-    // });
+      //change input email
+      fireEvent.change(emailInput, {
+        target: {
+          value: "adil@merribi.com"
+        }
+      });
 
-    //change input lastName
-    fireEvent.change(lastNameInput, {
-      target: {
-        value: "Merribi"
-      }
+      //submit form
+      fireEvent.submit(button);
     });
 
+    expect(lastNameInput.value).not.toBe(null);
+    expect(lastNameInput.value.length).toBeLessThanOrEqual(20);
+    expect(emailInput).toBeValid();
 
-    //change input email
-    fireEvent.change(emailInput, {
-      target: {
-        value: "adil@gmail.com"
-      }
-    });
-
-    //submit form
-    fireEvent.submit(button);
-    const expectedInfo = {
-      "firstName":"Adil",
-      "lastName":"Merribi",
-      "email":"adil@gmail.com"
-    }
-
-      expect(firstNameInput.value).not.toBe(null);
-      expect(firstNameInput.value.length).toBeLessThanOrEqual(15);
-      expect(lastNameInput.value).not.toBe(null);
-      expect(lastNameInput.value.length).toBeLessThanOrEqual(15);
-      expect(lastNameInput.value).not.toBe(null);
-      expect(emailInput).toBeValid();
-      //expect alert text to be expectedInfo
   });
 });
