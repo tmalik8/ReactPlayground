@@ -3,7 +3,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { render, fireEvent, waitForElement, wait } from "@testing-library/react";
 import SignupForm from "../../components/TestingForm";
 
-describe("Very important form", () => {
+describe("Testing Form", () => {
   it("submits values and fires", async () => {
     const { findByTestId } = render(
       <SignupForm />
@@ -11,6 +11,7 @@ describe("Very important form", () => {
 
     const firstNameInput = await waitForElement(() => findByTestId("firstName"));
     const lastNameInput = await waitForElement(() => findByTestId("lastName"));
+    const emailInput = await waitForElement(() => findByTestId("email"));
     const button = await waitForElement(() => findByTestId("Submit"));
 
     //change input firsName
@@ -27,6 +28,13 @@ describe("Very important form", () => {
     //   }
     // });
 
+
+    //change input email
+    fireEvent.change(emailInput, {
+      target: {
+        value: "adil@merribi"
+      }
+    });
     //blur field without input
     fireEvent.blur(lastNameInput);
 
@@ -35,8 +43,10 @@ describe("Very important form", () => {
 
 
     wait(() => {
-      expect(firstNameInput.innerHTML).not.toBe(null).toBe("Adil");
-      expect(lastNameInput.innerHTML).toHaveTextContent("Required");
+      expect(firstNameInput.innerHTML).not.toBe(null);
+      expect(firstNameInput.innerHTML.length).toBeLessThanOrEqual(15);
+      expect(lastNameInput.innerHTML).toBeRequired();
+      expect(emailInput.innerHTML).toBeInvalid();
     });
   });
 });
