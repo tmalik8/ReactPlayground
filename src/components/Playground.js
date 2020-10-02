@@ -19,7 +19,6 @@ import ToastWrapper from "./practice/ToastWrapper";
 import InternInfoDisplay from "./practice/InternInfoDisplay";
 import LightModal from "./practice/lightModal";
 import FadeText from "./practice/FadeText";
-import NavBar from "./practice/navBar"
 import PopOverTrigger from "./practice/PopOverButton";
 import LanguageList from './practice/LanguageList';
 import PhoneConfirm from "./PhoneConfirm";
@@ -34,6 +33,7 @@ import Icon from '.Icon';
 
 import PeopleComponent from "./PeopleComponent";
 import CreatePost from "./CreatePost"
+
 
 
 
@@ -142,6 +142,64 @@ let amonteProfile = {
   profileImage:"https://cdn.ebaumsworld.com/mediaFiles/picture/730195/86187705.jpg"
 };
 
+<<<<<<< HEAD
+=======
+const event = {
+  name: "Lorem ipsum dolor sit amet",
+  img: "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg",
+  description: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
+  tags: ["Activism", "#TimeForChange"],
+  date: "Sunday, May 25, 2020",
+  time: "8:00 AM - 12:00 PM",
+  location: "Washington Square Park"
+}
+
+let postData = {
+  content: "Ut tempus facilisis lacinia. Maecenas pharetra vel orci vitae tempor. Nulla sit amet ullamcorper ipsum. Vivamus vestibulum massa tortor, at luctus leo auctor ac. Praesent finibus dolor et luctus tincidunt. Phasellus ut neque eu nisl interdum luctus eu et nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempor sapien at faucibus mattis. Quisque venenatis tellus sed diam facilisis tempor. Vivamus ut mi at quam ultricies posuere. Maecenas in ipsum id quam maximus faucibus.",
+  time: new Date("August 25, 2020 03:24:00"),
+  imgs: ["https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg","https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg", "https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg","https://cdn.pixabay.com/photo/2017/08/03/11/05/people-2575608_960_720.jpg"],
+  //video: "https://www.youtube.com/embed/ttIWUvxnuEo",
+  stats: {likes: 162, reposts: 38, comments:52, favorites: 123}
+}
+
+
+const ConfirmModal = ({header, content}) => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const _header = header;
+  const _content = content;
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Test Confirm Modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+
+        </Modal.Header>
+        <Modal.Body>
+        <ConfirmationBox header={_header} content={_content}  />
+        <Button  className="d-flex justify-content-center" style={{backgroundColor:"#402366", color:"white",width:"80%",margin:"0 auto 0 auto"}}  onClick={handleClose}>
+            Okay
+          </Button>
+
+
+        </Modal.Body>
+        {/* <Modal.Footer>
+
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
+    </>
+  );
+
+}
+>>>>>>> 04000ab3ab61b1a6211c4008351a7ed908cf506c
 
 
 
@@ -149,11 +207,16 @@ let amonteProfile = {
 const Playground = (props) => {
   const [show, setShow] = useState(false);
   const[showJoke, setJoke]=useState(false);
+<<<<<<< HEAD
   const NavTitle = ['The PlayGround', 'Home', 'Meet the Interns', 'TurnUp Activism'];
+=======
+
+  
+>>>>>>> 04000ab3ab61b1a6211c4008351a7ed908cf506c
 
   return (
     <Container>
-      <NavBar NavTitles={NavTitle}/>
+  
       <Jumbotron>
         <DisplayEvent profile={amonteProfile}/>
         <h1 className="header">TurnUp React Playground</h1>
